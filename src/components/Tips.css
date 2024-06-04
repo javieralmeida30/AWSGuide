@@ -1,0 +1,8 @@
+#tipsContent ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tipsContent ul li {
+    padding: 5px 0;
+}

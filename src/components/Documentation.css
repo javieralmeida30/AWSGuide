@@ -1,0 +1,75 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tabs button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.tabs button:hover {
+    background-color: #45a049;
+}
+
+.documentation-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 250px;
+    border-right: 1px solid #ddd;
+    padding-right: 10px;
+}
+
+.sidebar h3 {
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.sidebar h4 {
+    cursor: pointer;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.sidebar ul li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #f1f1f1;
+}
+
+.service-content {
+    flex: 3;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: justify;
+}
+
+h2, p {
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,86 @@
+#exams {
+    text-align: center;
+}
+
+.exam-buttons {
+    margin-bottom: 20px;
+}
+
+.exam-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#examContent {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.question ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.question li {
+    margin: 10px 0;
+}
+
+#timer {
+    font-size: 24px;
+    color: red;
+    margin-top: 20px;
+}
+
+#score {
+    margin-top: 20px;
+}
+
+#score h3 {
+    font-size: 24px;
+    color: green;
+}
+
+#score p {
+    font-size: 18px;
+}
+
+.explanations {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.explanation {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.correct {
+    background-color: #e0ffe0;
+}
+
+.incorrect {
+    background-color: #ffe0e0;
+}
+
+.exam-controls {
+    margin-top: 20px;
+}
+
+.exam-controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
