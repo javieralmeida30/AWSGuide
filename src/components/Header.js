@@ -3,10 +3,12 @@ import './Header.css';
 
 function Header() {
     return (
-        <header>
-            <h1>¡Bienvenidos a la guia de Certificaciones de AWS!</h1>
-            <p>La solución para preparar los exámenes de AWS Cloud Practitioner y Solutions Architect correctamente.</p>
-        </header>
+      <header>
+        <h1>¡Bienvenidos Futuros AWS Cloud Practitioner Graduate!</h1>
+        <p>
+          Esta es su solución para preparar el exámen de AWS Cloud Practitioner.
+        </p>
+      </header>
     );
 }
 

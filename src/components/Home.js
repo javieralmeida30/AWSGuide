@@ -4,7 +4,7 @@ import Header from './Header';
 import './Home.css';
 import cloudPractitionerLogo from '../assets/cloud-practitioner-logo.png';
 import saaLogo from '../assets/saa-logo.png';
-import profilePicture from '../assets/profile-picture.jpg';
+// import profilePicture from '../assets/profile-picture.jpg';
 
 function Home() {
     return (
@@ -12,10 +12,10 @@ function Home() {
             <Header />
             <div className="home-content">
                 <div className="intro">
-                    <img src={profilePicture} alt="Javier Almeida" className="profile-picture" />
+                    {/* <img src={profilePicture} alt="Javier Almeida" className="profile-picture" /> */}
                     <div className="intro-text">
                         <h2>¡Hola! Soy Javier Almeida</h2>
-                        <p>Soy graduado del bootcamp de AWS re/Start, cuento con las certificaciones de AWS Solutions Architect Associate y AWS Cloud Practitioner. Trabajo como administrador de sistemas y utilizo AWS en mi día a día. Mi pasión por la nube y la tecnología me ha llevado a crear este sitio, con el objetivo de ayudar a aspirantes a AWS y estudiantes del bootcamp AWS re/Start a alcanzar sus metas.</p>
+                        <p>Soy graduado del bootcamp de AWS re/Start, cuento con las certificaciones de AWS Solutions Architect Associate y AWS Cloud Practitioner. Trabajo como administrador de sistemas y utilizo AWS en mi día a día. Mi pasión por la nube y la tecnología me ha llevado a crear este sitio, con el objetivo de ayudar a aspirantes a AWS y estudiantes del bootcamp AWS re/Start a alcanzar sus metas, especialmente por la escasa información que existe en español.</p>
                         <p>Si encuentras útil este sitio, no dudes en conectar conmigo en la sección de contacto. ¡Estoy aquí para ayudar!</p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ function Home() {
                     </Link>
                     <Link to="/tips" className="button">
                         <h3>Trucos y Consejos</h3>
-                        <p>Obtén tips y consejos para aprobar los exámenes y asociar servicios de AWS.</p>
+                        <p>Obtén tips y consejos para aprobar los exámenes y asociar términos a servicios de AWS.</p>
                     </Link>
                     <Link to="/proyectos" className="button">
                         <h3>Ideas de Proyectos</h3>
