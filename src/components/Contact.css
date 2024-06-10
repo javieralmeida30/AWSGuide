@@ -1,13 +1,85 @@
-#contact a {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+/* contact.css */
+
+/* Fondo con degradado */
+body {
+    background: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-#contact a:hover {
-    background-color: #45a049;
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.intro img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 40px;
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.text {
+    flex: 1;
+}
+
+.text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
 }

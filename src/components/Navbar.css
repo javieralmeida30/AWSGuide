@@ -1,3 +1,14 @@
+/* Navbar.css */
+
+/* Fondo con degradado */
+body {
+    background: linear-gradient(to right, #ffeb3b, #ffc107);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;

@@ -1,5 +1,16 @@
+/* headers.css */
+
+/* Fondo con degradado */
+body {
+    background: linear-gradient(to right, #ffeb3b, #ffc107);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    background-color: #4CAF50;
+    background-color: #ffeb3b; 
     color: white;
     padding: 20px;
     text-align: center;

@@ -1,30 +1,59 @@
+/* Exams.css */
+
+/* Fondo con degradado */
+body {
+    background: linear-gradient(to right, #ffeb3b, #ffc107);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
 #exams {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.exam-buttons {
-    margin-bottom: 20px;
-}
-
+/* Botones de examen */
 .exam-buttons button {
-    margin: 5px;
-    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
     font-size: 16px;
+    margin: 4px 2px;
     cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
 }
 
-#examContent {
-    margin-top: 20px;
-    text-align: left;
+.exam-buttons button:hover {
+    background-color: #45a049;
 }
 
+/* Pregunta y opciones */
 .question {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
 .question p {
     font-size: 18px;
-    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .question ul {
@@ -33,54 +62,70 @@
 }
 
 .question li {
-    margin: 10px 0;
-}
-
-#timer {
-    font-size: 24px;
-    color: red;
-    margin-top: 20px;
-}
-
-#score {
-    margin-top: 20px;
-}
-
-#score h3 {
-    font-size: 24px;
-    color: green;
-}
-
-#score p {
-    font-size: 18px;
-}
-
-.explanations {
-    text-align: left;
-    margin-top: 20px;
-}
-
-.explanation {
-    border: 1px solid #ddd;
+    background: #f1f1f1;
+    margin: 5px 0;
     padding: 10px;
-    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
-.correct {
-    background-color: #e0ffe0;
+.question li input {
+    margin-right: 10px;
 }
 
-.incorrect {
-    background-color: #ffe0e0;
+/* Botón siguiente */
+button {
+    background-color: #16ba00;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
 }
 
+button:hover {
+    background-color: #007bb5;
+}
+
+/* Controles del examen */
 .exam-controls {
     margin-top: 20px;
 }
 
 .exam-controls button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    background-color: #f44336;
+}
+
+.exam-controls button:hover {
+    background-color: #d32f2f;
+}
+
+/* Temporizador */
+#timer {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Explicaciones */
+.explanations .explanation {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.explanations .explanation.correct {
+    border-left: 5px solid #4CAF50;
+}
+
+.explanations .explanation.incorrect {
+    border-left: 5px solid #f44336;
 }

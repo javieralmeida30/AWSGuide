@@ -1,7 +1,19 @@
+/* home.css */
+
+/* Fondo con degradado */
+body {
+    background: linear-gradient(to right, #ffeb3b, #ffc107);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo amarillo para el contenido */
 .home-content {
     padding: 40px;
     text-align: center;
-    background-color: #f4f4f9;
+    background-color: #a8e09d; /* Cambiado a amarillo */
 }
 
 .intro {

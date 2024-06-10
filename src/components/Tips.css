@@ -1,8 +1,85 @@
-#tipsContent ul {
-    list-style-type: none;
+/* Fondo con degradado */
+body {
+    background: linear-gradient(to right, #ffeb3b, #ffc107);
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
     padding: 0;
 }
 
-#tipsContent ul li {
-    padding: 5px 0;
+#tips {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.tips-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.card ul li:hover {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+.info {
+    text-align: left;
+}
+
+.info span {
+    display: block;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.info strong {
+    display: block;
+    font-size: 1.3em;
+    color: #333;
 }
