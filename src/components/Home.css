@@ -3,34 +3,25 @@
 /* Fondo con degradado */
 body {
     background: linear-gradient(to right, #ffeb3b, #ffc107);
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Fondo amarillo para el contenido */
 .home-content {
     padding: 40px;
     text-align: center;
-    background-color: #a8e09d; /* Cambiado a amarillo */
+    background-color: #ffffff;
 }
 
 .intro {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-    background: #fff;
+    background: #f7f7f7;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.profile-picture {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -62,10 +53,6 @@ body {
     color: #333;
 }
 
-.intro-text ul li strong {
-    color: #4CAF50;
-}
-
 .section-buttons {
     display: flex;
     justify-content: center;
@@ -75,7 +62,7 @@ body {
 }
 
 .button {
-    background-color: #4CAF50;
+    background-color: #f0db68;
     color: white;
     text-decoration: none;
     padding: 20px;
@@ -87,7 +74,7 @@ body {
 }
 
 .button:hover {
-    background-color: #45a049;
+    background-color: #ffc107;
     transform: translateY(-5px);
 }
 
@@ -113,13 +100,13 @@ body {
 }
 
 h2 {
-    color: #333;
+    color: #9f7474;
     font-size: 28px;
     margin-top: 0;
 }
 
 p {
-    color: #555;
+    color: #000000;
     font-size: 18px;
     margin: 10px 0;
 }

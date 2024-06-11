@@ -1,13 +1,14 @@
+/* app.css */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #a8e09d, #dae4d5);
+  background: linear-gradient(to right, #efe8a5, #f4ea94);
   color: #333;
 }
 
 header {
-  background-color: #4CAF50;
+  background-color: #e6d24f;
   color: white;
   padding: 20px;
   text-align: center;

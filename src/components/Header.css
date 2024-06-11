@@ -1,17 +1,19 @@
-/* headers.css */
-
-/* Fondo con degradado */
-body {
-    background: linear-gradient(to right, #ffeb3b, #ffc107);
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
+/* header.css */
 header {
-    background-color: #ffeb3b; 
+    background-color: #282c34; 
     color: white;
     padding: 20px;
     text-align: center;
+    border-bottom: 5px solid #ffc107;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 0;
+    padding-top: 10px;
 }

@@ -2,7 +2,7 @@
 
 /* Fondo con degradado */
 body {
-    background: linear-gradient(to right, #ffeb3b, #ffc107);
+    background: linear-gradient(to right, #f4eb99, #f8e098);
     font-family: Arial, sans-serif;
     color: #333;
     margin: 0;
@@ -34,6 +34,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
 .sidebar {
@@ -80,7 +81,25 @@ body {
     text-align: justify;
 }
 
+.service-content img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 5px;
+}
+
 h2, p {
     text-align: center;
     margin-bottom: 20px;
+}
+
+.service-content ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    margin-bottom: 20px; /* Añade margen inferior a la lista */
+}
+
+.service-content li {
+    margin-bottom: 10px; /* Añade margen inferior a los elementos de la lista */
 }
