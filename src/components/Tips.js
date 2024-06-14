@@ -3,7 +3,7 @@ import './Tips.css';
 
 const serviceAssociations = [
     { icon: '📦', term: 'Base de datos NoSQL', service: 'DynamoDB - Ideal para aplicaciones móviles y web con alta demanda de lectura y escritura.' },
-    { icon: '🏢', term: 'Almacenamiento de OBJETOS', service: 'Amazon S3 - Almacenamiento de archivos y backups, incluyendo versiones y control de acceso.' },
+    { icon: '🏢', term: 'Almacenamiento de objetos (object storage)', service: 'Amazon S3 - Almacenamiento de archivos y backups, incluyendo versiones y control de acceso.' },
     { icon: '💻', term: 'Computación bajo demanda (ON DEMAND)', service: 'Amazon EC2 - Ejecución de aplicaciones empresariales y servidores virtuales.' },
     { icon: '🌐', term: 'Entrega de contenido (Content delivery)', service: 'Amazon CloudFront - Distribución rápida de contenido globalmente, ideal para sitios web y streaming.' },
     { icon: '🔍', term: 'Monitorización y logs', service: 'Amazon CloudWatch - Monitoreo de recursos de AWS, logs y métricas personalizadas.' },
@@ -11,7 +11,7 @@ const serviceAssociations = [
     { icon: '🗄️', term: 'Base de datos relacional', service: 'Amazon RDS - Bases de datos gestionadas como MySQL, PostgreSQL y SQL Server.' },
     { icon: '📊', term: 'Análisis de datos, graficar los datos', service: 'Amazon QuickSight - Visualización de datos y creación de dashboards interactivos.' },
     { icon: '🔄', term: 'CICD entrega continua, despliegue continuo', service: 'AWS CodePipeline - Automatización de flujos de trabajo de integración y entrega continua.' },
-    { icon: '☁️', term: 'Almacenamiento en bloque', service: 'Amazon EBS - Volúmenes de almacenamiento persistente para EC2, con snapshots para backup.' },
+    { icon: '☁️', term: 'Almacenamiento en bloque (block storage)', service: 'Amazon EBS - Volúmenes de almacenamiento persistente para EC2, con snapshots para backup.' },
     { icon: '🛡️', term: 'Protección contra ataques de DDoS', service: 'AWS Shield - Protección avanzada contra ataques DDoS.' },
     { icon: '🔍', term: 'Inspección de seguridad', service: 'Amazon Inspector - Análisis automatizado de vulnerabilidades en aplicaciones.' },
     { icon: '📥', term: 'Mensajería asincrónica, envio en colas', service: 'Amazon SQS - Colas de mensajes para desacoplar y escalar microservicios.' },

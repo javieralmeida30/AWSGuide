@@ -16,6 +16,7 @@ import sdk from '../assets/sdk.png'
 import waframework from '../assets/waframework.png'
 import seguridad from '../assets/seguridad.png'
 import arquitecto from '../assets/arquitecto.png'
+import pass from '../assets/pass.png'
 import infraglobal from '../assets/infraglobal.jpg'
 import nosqlsql from '../assets/nosqlsql.avif'
 
@@ -240,7 +241,7 @@ function Documentation() {
                             <li><strong>Backend as a Service (BaaS):</strong> Proporciona servicios backend preconstruidos, como bases de datos y autenticación, que los desarrolladores pueden integrar fácilmente en sus aplicaciones. Ejemplo: AWS Amplify.</li>
                         </ul>
                     `,
-                    imageUrl: ''
+                    imageUrl: pass
                 },
                 "Tipos de instancias de Amazon EC2 (por ejemplo, Reserved, On-Demand, Spot)": {
                     description: "Amazon EC2 ofrece varios tipos de instancias como On-Demand, Reserved y Spot cada uno diseñado para diferentes necesidades. On-Demand permite pagar por capacidad de cómputo por hora o por segundo sin compromisos a largo plazo y es ideal para aplicaciones con cargas de trabajo variables y para desarrollo y prueba de aplicaciones. Reserved ofrece descuentos significativos cuando se compromete a usar una instancia por uno o tres años ideal para aplicaciones estables y predecibles. Spot permite aprovechar la capacidad no utilizada en AWS con descuentos de hasta el 90%, perfecto para aplicaciones que pueden tolerar interrupciones como procesamiento por lotes y análisis de big data.",

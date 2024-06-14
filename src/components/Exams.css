@@ -1,15 +1,3 @@
-/* Exams.css */
-
-/* Fondo con degradado */
-body {
-    background: linear-gradient(to right, #ffeb3b, #ffc107);
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-/* Contenedor principal */
 #exams {
     display: flex;
     flex-direction: column;
@@ -22,7 +10,7 @@ body {
 
 /* Botones de examen */
 .exam-buttons button {
-    background-color: #4CAF50;
+    background-color: #007bb5;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -37,7 +25,7 @@ body {
 }
 
 .exam-buttons button:hover {
-    background-color: #45a049;
+    background-color: #065a81;
 }
 
 /* Pregunta y opciones */
@@ -74,7 +62,7 @@ body {
 
 /* Botón siguiente */
 button {
-    background-color: #16ba00;
+    background-color: #007bb5;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -111,21 +99,28 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Explicaciones */
-.explanations .explanation {
-    background-color: #fff;
+/* Explanations */
+.explanations {
+    margin-top: 20px;
+}
+
+.explanation {
+    background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.explanations .explanation.correct {
-    border-left: 5px solid #4CAF50;
+.explanation.correct {
+    border-left: 4px solid #4CAF50;
 }
 
-.explanations .explanation.incorrect {
-    border-left: 5px solid #f44336;
+.explanation.incorrect {
+    border-left: 4px solid #f44336;
+}
+
+.explanation p {
+    margin: 0;
+    padding: 5px 0;
 }

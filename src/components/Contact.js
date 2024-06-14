@@ -1,8 +1,8 @@
 import React from 'react';
 import './Contact.css';
-import javierImage from '../assets/profile-picture.jpg'; // Importa tu imagen aquí
-import linkedinIcon from '../assets/linkedin-icon.png'; // Importa el icono de LinkedIn aquí
-import githubIcon from '../assets/github-icon.png'; // Importa el icono de GitHub aquí
+import javierImage from '../assets/profile-picture.jpeg'; 
+import linkedinIcon from '../assets/linkedin-icon.png'; 
+import githubIcon from '../assets/github-icon.png'; 
 
 function Contact() {
     return (
@@ -24,7 +24,7 @@ function Contact() {
                 </div>
                 <div className="contact-info">
                     <h3>Contacto</h3>
-                    <p>Si te fue util el sitio, ¡no dudes en conectar conmigo a través de LinkedIn o GitHub!</p>
+                    <p>Si te fue util el sitio, ¡no dudes en conectar conmigo a través de LinkedIn o seguirnos en GitHub!</p>
                     <div className="social-icons">
                         <a href="https://www.linkedin.com/in/javieralmeida30" target="_blank" rel="noopener noreferrer">
                             <img src={linkedinIcon} alt="LinkedIn" />

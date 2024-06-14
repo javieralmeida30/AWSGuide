@@ -8,14 +8,14 @@ import rekognitionImage from '../assets/rekognition.png';
 function Proyectos() {
     return (
         <section id="proyectos">
-            <a href="https://aws.amazon.com/ec2/" className="project" target="_blank" rel="noopener noreferrer">
+            <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/automating_with_eventbridge.html" className="project" target="_blank" rel="noopener noreferrer">
                 <img src={ec2Image} alt="Programar una instancia EC2 para que se encienda y apague en un horario específico" />
                 <div className="project-info">
                     <h3>Programar una instancia EC2</h3>
                     <p>Utiliza Amazon EventBridge Scheduler para programar el encendido y apagado de una instancia EC2 en un horario específico.</p>
                 </div>
             </a>
-            <a href="https://aws.amazon.com/s3/" className="project" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.youtube.com/watch?v=sCQwEVhCvTg&t=1s&ab_channel=TechWithLucy" className="project" target="_blank" rel="noopener noreferrer">
                 <img src={s3Image} alt="Lanzar un sitio web estático en S3" />
                 <div className="project-info">
                     <h3>Lanzar un sitio web estático en S3</h3>

@@ -10,7 +10,7 @@ function Home() {
       <div>
         <Header />
         <div className="home-content">
-          <div className="intro">
+          <div className="introo">
             <div className="intro-text">
               <h2>¡Hola! Soy Javier Almeida</h2>
               <p>
@@ -32,7 +32,7 @@ function Home() {
           <h2>Sobre Esta Guía</h2>
           <p>
             Esta guía está diseñada para ayudarte a prepararte para los exámenes
-            de AWS Cloud Practitioner y AWS Solutions Architect Associate. Usa
+            de AWS Cloud Practitioner y proximamente AWS Solutions Architect Associate. Usa
             la barra de navegación para explorar diferentes secciones incluyendo
             documentación, exámenes interactivos y consejos.
           </p>

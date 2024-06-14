@@ -1,25 +1,13 @@
-/* home.css */
-
-/* Fondo con degradado */
-body {
-    background: linear-gradient(to right, #ffeb3b, #ffc107);
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
 .home-content {
     padding: 40px;
     text-align: center;
-    background-color: #ffffff;
 }
 
-.intro {
+.introo {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-    background: #f7f7f7;
+    background-color: #18b6ff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -38,7 +26,7 @@ body {
 .intro-text p {
     font-size: 18px;
     margin: 10px 0;
-    color: #555;
+    color: #2c2929;
 }
 
 .intro-text ul {
@@ -62,8 +50,8 @@ body {
 }
 
 .button {
-    background-color: #f0db68;
-    color: white;
+    background-color: #18b6ff;
+    color: rgb(18, 17, 17);
     text-decoration: none;
     padding: 20px;
     border-radius: 10px;
@@ -74,7 +62,7 @@ body {
 }
 
 .button:hover {
-    background-color: #ffc107;
+    background-color: #0888c4;
     transform: translateY(-5px);
 }
 
