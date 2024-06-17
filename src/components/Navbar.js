@@ -13,7 +13,7 @@ function Navbar() {
             <Link to="/Documentación">Documentación</Link>
           </li>
           <li>
-            <Link to="/exams">Examenes de prueba</Link>
+            <Link to="/exams">Exámenes de prueba</Link>
           </li>
           <li>
             <Link to="/tips">Consejos y Asociaciones</Link>

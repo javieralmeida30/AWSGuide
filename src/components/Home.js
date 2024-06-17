@@ -1,71 +1,56 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from './Header';
 import './Home.css';
 import cloudPractitionerLogo from '../assets/cloud-practitioner-logo.png';
 import saaLogo from '../assets/saa-logo.png';
+import Navbar from './Navbar';
 
 function Home() {
     return (
       <div>
-        <Header />
-        <div className="home-content">
-          <div className="introo">
+        <div className="header">
+          <h1>¡Bienvenidos Futuros AWS Certified Cloud Practitioner!</h1>
+          <p>Esta es su solución para preparar el examen de AWS Cloud Practitioner.</p>
+        </div>
+        <div className="home-container">
+          <div className="intro-section">
             <div className="intro-text">
-              <h2>¡Hola! Soy Javier Almeida</h2>
+              <h1>Bienvenido a la Guía de AWS</h1>
               <p>
-                Soy graduado del bootcamp de AWS re/Start, cuento con las
-                certificaciones de AWS Solutions Architect Associate y AWS Cloud
-                Practitioner. Trabajo como administrador de sistemas y utilizo
-                AWS en mi día a día. Mi pasión por la nube y la tecnología me ha
-                llevado a crear este sitio, con el objetivo de ayudar a
-                aspirantes a AWS y estudiantes del bootcamp AWS re/Start a
-                alcanzar sus metas, especialmente por la escasa información que
-                existe en español.
+                Soy Javier Almeida, apasionado de la nube y la tecnología.
+                Aquí encontrarás recursos esenciales para prepararte para los
+                exámenes de AWS Cloud Practitioner y Solutions Architect Associate.
               </p>
               <p>
-                Si encuentras útil este sitio, no dudes en conectar conmigo en
-                la sección de contacto. ¡Estoy aquí para ayudar!
+                Explora la documentación, realiza exámenes de práctica y descubre
+                consejos útiles para dominar AWS.
               </p>
             </div>
+            <div className="intro-image">
+              <img src={cloudPractitionerLogo} alt="AWS Cloud Practitioner Logo" />
+              <img src={saaLogo} alt="AWS Solutions Architect Associate Logo" />
+            </div>
           </div>
-          <h2>Sobre Esta Guía</h2>
-          <p>
-            Esta guía está diseñada para ayudarte a prepararte para los exámenes
-            de AWS Cloud Practitioner y proximamente AWS Solutions Architect Associate. Usa
-            la barra de navegación para explorar diferentes secciones incluyendo
-            documentación, exámenes interactivos y consejos.
-          </p>
-          <div className="section-buttons">
-            <Link to="/Documentación" className="button">
-              <h3>Documentación</h3>
-              <p>
-                Encuentra información detallada sobre los servicios de AWS
-                necesarios para los exámenes.
-              </p>
-            </Link>
-            <Link to="/exams" className="button">
-              <h3>Exámenes de Práctica</h3>
-              <p>Pon a prueba tus conocimientos con preguntas interactivas.</p>
-            </Link>
-            <Link to="/tips" className="button">
-              <h3>Trucos y Consejos</h3>
-              <p>
-                Obtén tips y consejos para aprobar los exámenes y asociar
-                términos a servicios de AWS.
-              </p>
-            </Link>
-            <Link to="/proyectos" className="button">
-              <h3>Ideas de Proyectos</h3>
-              <p>Inspírate con ideas de proyectos para tus portafolios.</p>
-            </Link>
-          </div>
-          <div className="logos">
-            <img
-              src={cloudPractitionerLogo}
-              alt="AWS Cloud Practitioner Logo"
-            />
-            <img src={saaLogo} alt="AWS Solutions Architect Associate Logo" />
+          <div className="main-content">
+            <h2>Explora Nuestras Secciones</h2>
+            <div className="button-group">
+              <Link to="/Documentación" className="home-button">
+                <h3>Documentación</h3>
+                <p>Información detallada sobre los servicios de AWS.</p>
+              </Link>
+              <Link to="/exams" className="home-button">
+                <h3>Exámenes de Práctica</h3>
+                <p>Preguntas interactivas para evaluar tus conocimientos.</p>
+              </Link>
+              <Link to="/tips" className="home-button">
+                <h3>Trucos y Consejos</h3>
+                <p>Consejos para aprobar los exámenes y asociar servicios.</p>
+              </Link>
+              <Link to="/proyectos" className="home-button">
+                <h3>Ideas de Proyectos</h3>
+                <p>Proyectos inspiradores para tu portafolio.</p>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

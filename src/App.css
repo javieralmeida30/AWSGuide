@@ -1,15 +1,13 @@
-/* app.css */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #efe8a5, #f4ea94);
+  background: #e0f7fa;
   color: #333;
 }
 
 header {
-  background-color: #f3e696;
-  color: rgb(7, 7, 7);
+  color: #007acc;
   padding: 20px;
   text-align: center;
 }
@@ -18,7 +16,7 @@ nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  background-color: #333;
+  background-color: #005f73;
   overflow: hidden;
 }
 
@@ -35,7 +33,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: #111;
+  background-color: #052d35;
 }
 
 section {

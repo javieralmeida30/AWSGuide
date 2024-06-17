@@ -3,7 +3,7 @@ import './Tips.css';
 
 const serviceAssociations = [
     { icon: '📦', term: 'Base de datos NoSQL', service: 'DynamoDB - Ideal para aplicaciones móviles y web con alta demanda de lectura y escritura.' },
-    { icon: '🏢', term: 'Almacenamiento de objetos (object storage)', service: 'Amazon S3 - Almacenamiento de archivos y backups, incluyendo versiones y control de acceso.' },
+    { icon: '🏢', term: 'Bucket / Almacenamiento de objetos (object storage)', service: 'Amazon S3 - Almacenamiento de archivos y backups, incluyendo versiones y control de acceso.' },
     { icon: '💻', term: 'Computación bajo demanda (ON DEMAND)', service: 'Amazon EC2 - Ejecución de aplicaciones empresariales y servidores virtuales.' },
     { icon: '🌐', term: 'Entrega de contenido (Content delivery)', service: 'Amazon CloudFront - Distribución rápida de contenido globalmente, ideal para sitios web y streaming.' },
     { icon: '🔍', term: 'Monitorización y logs', service: 'Amazon CloudWatch - Monitoreo de recursos de AWS, logs y métricas personalizadas.' },
@@ -21,7 +21,7 @@ const serviceAssociations = [
     { icon: '🚀', term: 'Despliegue de aplicaciones automaticamente', service: 'AWS Elastic Beanstalk - Implementación y gestión automática de aplicaciones.' },
     { icon: '📦', term: 'Orquestación de contenedores, docker', service: 'Amazon ECS - Gestión de contenedores Docker a escala.' },
     { icon: '🏗️', term: 'Infraestructura como código', service: 'AWS CloudFormation - Modelado y provisión de recursos de AWS mediante plantillas.' },
-    { icon: '🕸️', term: 'DNS y enrutamiento', service: 'Amazon Route 53 - Gestión de nombres de dominio y balanceo de carga.' },
+    { icon: '🕸️', term: 'DNS (Domain Name System) y enrutamiento', service: 'Amazon Route 53 - Gestión de nombres de dominio y balanceo de carga.' },
     { icon: '🛠️', term: 'Gestión de configuración, quien hizo tal cosa', service: 'AWS Config - Seguimiento de cambios y cumplimiento en la configuración de recursos.' },
     { icon: '🔒', term: 'Gestión de claves de seguridad', service: 'AWS KMS - Creación y control de claves de cifrado para datos en AWS.' },
     { icon: '🗃️', term: 'Archivado de datos', service: 'Amazon Glacier - Almacenamiento de archivos de bajo costo para archivos y backups a largo plazo.' },

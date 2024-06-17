@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 40px;
-    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    background: linear-gradient(to right, #feffff, #ffffff);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,11 +24,11 @@
 
 .text {
     flex: 1;
-    color: rgb(255, 255, 255);
+    color: rgb(7, 5, 5);
 }
 
 .text h2 {
-    color: white;
+    color: rgb(1, 1, 1);
     font-size: 24px;
     margin-bottom: 10px;
 }

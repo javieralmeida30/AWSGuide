@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #005f73;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadido sombra */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Añadida transición para hover */
+}
+
+nav ul li a:hover {
+    background-color: #052d35;
+    transform: translateY(-2px); /* Añadido efecto de hover */
+    border-radius: 5px;
+}
