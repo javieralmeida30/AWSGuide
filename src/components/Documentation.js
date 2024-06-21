@@ -35,7 +35,6 @@ function Documentation() {
                         "AWS Cloud Adoption Framework (AWS CAF)",
                         "AWS Compliance",
                         "AWS Pricing Calculator",
-                        "AWS re:Post",
                         "AWS SDKs",
                         "AWS Support Center",
                         "Planes de soporte de AWS",
@@ -244,7 +243,39 @@ function Documentation() {
                     imageUrl: pass
                 },
                 "Tipos de instancias de Amazon EC2 (por ejemplo, Reserved, On-Demand, Spot)": {
-                    description: "Amazon EC2 ofrece varios tipos de instancias como On-Demand, Reserved y Spot cada uno diseñado para diferentes necesidades. On-Demand permite pagar por capacidad de cómputo por hora o por segundo sin compromisos a largo plazo y es ideal para aplicaciones con cargas de trabajo variables y para desarrollo y prueba de aplicaciones. Reserved ofrece descuentos significativos cuando se compromete a usar una instancia por uno o tres años ideal para aplicaciones estables y predecibles. Spot permite aprovechar la capacidad no utilizada en AWS con descuentos de hasta el 90%, perfecto para aplicaciones que pueden tolerar interrupciones como procesamiento por lotes y análisis de big data.",
+                    "description": `
+                    <p>Amazon EC2 ofrece varios tipos de instancias diseñadas para diferentes necesidades:</p>
+                    <ul>
+                        <li>
+                            <h3>On-Demand</h3>
+                            <p>Permite pagar por capacidad de cómputo por hora o por segundo sin compromisos a largo plazo. Es ideal para aplicaciones con cargas de trabajo variables y para desarrollo y prueba de aplicaciones.</p>
+                        </li>
+                        <li>
+                            <h3>Reserved</h3>
+                            <p>Ofrece descuentos significativos cuando te comprometes a usar una instancia por uno o tres años. Es ideal para aplicaciones estables y predecibles.</p>
+                        </li>
+                        <li>
+                            <h3>Spot</h3>
+                            <p>Permite aprovechar la capacidad no utilizada en AWS con descuentos de hasta el 90%. Perfecto para aplicaciones que pueden tolerar interrupciones como procesamiento por lotes y análisis de big data.</p>
+                        </li>
+                        <li>
+                            <h3>Dedicated Hosts</h3>
+                            <p>Permiten alquilar un servidor físico dedicado para su uso exclusivo, proporcionando visibilidad completa y control sobre la ubicación del servidor y los recursos.</p>
+                        </li>
+                        <li>
+                            <h3>Dedicated Instances</h3>
+                            <p>Instancias físicas dedicadas a un solo cliente, sin visibilidad sobre la ubicación del servidor.</p>
+                        </li>
+                        <li>
+                            <h3>Savings Plans</h3>
+                            <p>Modelo de precios flexible que ofrece ahorro significativo en AWS en uso de cómputo a cambio de un compromiso de uso por uno o tres años.</p>
+                        </li>
+                        <li>
+                            <h3>Spot Fleet</h3>
+                            <p>Una colección de instancias Spot que permite usar y administrar múltiples tipos de instancias de Amazon EC2 y solicitar capacidad para escalabilidad automática.</p>
+                        </li>
+                    </ul>
+                `,
                     imageUrl: spot
                 },
                 "Machine learning": {
@@ -284,10 +315,6 @@ function Documentation() {
                 "AWS Pricing Calculator": {
                     description: "AWS Pricing Calculator permite a los usuarios estimar los costos mensuales de AWS basados en sus necesidades específicas. Los usuarios pueden seleccionar y configurar diversos servicios de AWS, como EC2 para instancias de cómputo, S3 para almacenamiento de datos, y RDS para bases de datos, ajustando variables como la región, el tipo de instancia, y el uso previsto. La calculadora proporciona un desglose detallado de los costos estimados, lo que ayuda a planificar y gestionar el presupuesto de manera eficiente. Por ejemplo, una empresa que planea lanzar una nueva aplicación web puede usar la calculadora para estimar los costos de servidores, almacenamiento y bases de datos, asegurando que el proyecto se mantenga dentro del presupuesto.",
                     imageUrl: AWSPricingCalculator
-                },
-                "AWS re:Post": {
-                    description: "AWS re:Post es una comunidad de preguntas y respuestas que permite a los usuarios de AWS encontrar respuestas a preguntas técnicas, compartir conocimientos y aprender de las experiencias de otros usuarios y expertos de AWS. Por ejemplo, un desarrollador que enfrenta un problema con la configuración de Amazon EC2 puede publicar su pregunta en AWS re y recibir respuestas detalladas de otros miembros de la comunidad o incluso de expertos certificados de AWS, facilitando así la resolución de problemas y la mejora continua del uso de servicios de AWS.",
-                    imageUrl: repost
                 },
                 "AWS SDKs": {
                     description: "Los AWS SDKs (Kits de Desarrollo de Software) proporcionan bibliotecas, ejemplos de código y documentación para ayudar a los desarrolladores a integrar y utilizar los servicios de AWS en sus aplicaciones mediante lenguajes de programación populares como Java, Python, JavaScript, y más. Por ejemplo, un desarrollador puede usar el AWS SDK para Python (boto3) para escribir scripts que automaticen la creación y gestión de recursos en Amazon S3, como la creación de buckets, la carga de archivos y la gestión de permisos, simplificando así el desarrollo y la implementación de aplicaciones en la nube de AWS.",
@@ -866,15 +893,16 @@ function Documentation() {
                 },
                 "Infraestructura global de AWS (por ejemplo, Regiones de AWS, Zonas de disponibilidad)": {
                     description: `
-                    <p>La infraestructura global de AWS está diseñada para ofrecer una alta disponibilidad, redundancia y baja latencia. Esta infraestructura se organiza en regiones y zonas de disponibilidad, proporcionando una robusta plataforma en la nube que permite a los clientes desplegar aplicaciones y servicios de manera confiable y segura.</p>
+                    <p>La infraestructura global de AWS está diseñada para ofrecer una alta disponibilidad, redundancia y baja latencia. Esta infraestructura se organiza en regiones, zonas de disponibilidad y Edge Locations, proporcionando una robusta plataforma en la nube que permite a los clientes desplegar aplicaciones y servicios de manera confiable y segura.</p>
                     <ul>
                         <li><strong>Regiones de AWS:</strong> Son áreas geográficas separadas que contienen múltiples zonas de disponibilidad. Cada región es completamente independiente de las demás en términos de ubicación geográfica, fuentes de energía y conectividad. AWS actualmente tiene decenas de regiones en todo el mundo, permitiendo a los clientes desplegar aplicaciones cerca de sus usuarios para reducir la latencia y cumplir con requisitos locales de residencia de datos.</li>
-                        <li><strong>Zonas de disponibilidad:</strong> Dentro de cada región hay varias zonas de disponibilidad (Availability Zones, AZ). Cada zona de disponibilidad es un centro de datos discreto con energía, refrigeración y conectividad redundantes. Las zonas de disponibilidad están interconectadas con enlaces de baja latencia, alta velocidad y redundancia para facilitar la replicación de datos y la alta disponibilidad de las aplicaciones.</li>
+                        <li><strong>Zonas de disponibilidad (Availability Zones, AZ):</strong> Dentro de cada región hay varias zonas de disponibilidad. Cada zona de disponibilidad es un centro de datos discreto con energía, refrigeración y conectividad redundantes. Las zonas de disponibilidad están interconectadas con enlaces de baja latencia, alta velocidad y redundancia para facilitar la replicación de datos y la alta disponibilidad de las aplicaciones.</li>
+                        <li><strong>Edge Locations:</strong> Las Edge Locations (ubicaciones de borde) son centros de datos distribuidos globalmente que AWS utiliza para entregar contenido con baja latencia a los usuarios finales. Son utilizadas principalmente por servicios como Amazon CloudFront y AWS Global Accelerator para distribuir contenido y aplicaciones de manera rápida y eficiente.</li>
                         <li><strong>Redundancia y disponibilidad:</strong> Al desplegar recursos en múltiples zonas de disponibilidad, los clientes pueden diseñar sus aplicaciones para que sean tolerantes a fallos y continúen operando en caso de que una zona de disponibilidad experimente problemas.</li>
                         <li><strong>Presencia global:</strong> La presencia global de regiones permite a los clientes desplegar aplicaciones cerca de sus usuarios finales, reduciendo la latencia y mejorando la experiencia del usuario. Además, algunas organizaciones tienen requisitos específicos para mantener los datos dentro de ciertos límites geográficos, y las múltiples regiones de AWS permiten cumplir con estos requisitos seleccionando la región adecuada para almacenar y procesar datos.</li>
                         <li><strong>Escalabilidad y flexibilidad:</strong> La amplia infraestructura de AWS permite a los clientes escalar sus aplicaciones y servicios de manera global, aprovechando la capacidad de múltiples regiones y zonas de disponibilidad para manejar grandes volúmenes de tráfico y cargas de trabajo.</li>
                     </ul>
-                    <p>En resumen, la infraestructura global de AWS, compuesta por regiones y zonas de disponibilidad, proporciona una plataforma robusta y flexible que permite a los clientes desplegar aplicaciones con alta disponibilidad, baja latencia y conformidad con los requisitos de residencia de datos.</p>
+                    <p>En resumen, la infraestructura global de AWS, compuesta por regiones, zonas de disponibilidad y Edge Locations, proporciona una plataforma robusta y flexible que permite a los clientes desplegar aplicaciones con alta disponibilidad, baja latencia y conformidad con los requisitos de residencia de datos.</p>
                 `,
                 imageUrl: infraglobal
                 },
