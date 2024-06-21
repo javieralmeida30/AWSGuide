@@ -17,9 +17,9 @@ function Home() {
             <div className="intro-text">
               <h1>Bienvenido a la Guía de AWS</h1>
               <p>
-                Soy Javier Almeida, apasionado de la nube y la tecnología.
-                Aquí encontrarás recursos esenciales para prepararte para los
-                exámenes de AWS Cloud Practitioner y Solutions Architect Associate.
+                Soy Javier Almeida, apasionado de la nube y la tecnología, graduado del bootcamp AWS re/start, cuento con las certificaciones de AWS Solutions Architect Associate y Cloud Practitioner.
+                Aquí encontrarás recursos esenciales para prepararte para el
+                examen de AWS Cloud Practitioner y proximamente de Solutions Architect Associate.
               </p>
               <p>
                 Explora la documentación, realiza exámenes de práctica y descubre
@@ -48,7 +48,7 @@ function Home() {
               </Link>
               <Link to="/proyectos" className="home-button">
                 <h3>Ideas de Proyectos</h3>
-                <p>Proyectos inspiradores para tu portafolio.</p>
+                <p>Proyectos interesantes para tu portafolio.</p>
               </Link>
             </div>
           </div>

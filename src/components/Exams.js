@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './Exams.css';
+import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
+import 'react-accessible-accordion/dist/fancy-example.css';
 
 function Exams() {
     const examQuestions = {
@@ -82,7 +84,7 @@ function Exams() {
                 explanation: "Los volúmenes de Provisioned IOPS SSD (io1/io2) están diseñados para satisfacer las necesidades de cargas de trabajo intensivas en E/S, particularmente cargas de trabajo de bases de datos que requieren baja latencia y un rendimiento de E/S constante. Son la mejor opción para una base de datos de alto rendimiento."
             },
             {
-                question: "¿Cuál es la práctica recomendada con respecto a las claves de acceso de AWS para cuentas raíz?",
+                question: "¿Cuál es la práctica recomendada con respecto a las claves de acceso de AWS para cuentas raíz(usuario root)?",
                 options: [
                     "A. Generar varios conjuntos de claves de acceso para respaldo.",
                     "B. No generar claves de acceso para cuentas raíz.",
@@ -675,7 +677,7 @@ function Exams() {
     const [score, setScore] = useState(null);
     const [explanations, setExplanations] = useState([]);
     const [isPaused, setIsPaused] = useState(false);
-    const [examStarted, setExamStarted] = useState(false); // Nueva variable de estado
+    const [examStarted, setExamStarted] = useState(false);
 
     const startExam = (examType) => {
         const questions = examQuestions[examType].sort(() => 0.5 - Math.random());
@@ -685,12 +687,12 @@ function Exams() {
         setScore(null);
         setExplanations([]);
         setIsPaused(false);
-        setExamStarted(true); // Iniciar el examen
-        startTimer(60 * 60);  // Start timer for 60 minutes
+        setExamStarted(true);
+        startTimer(60 * 60);
     };
 
     const startTimer = (duration) => {
-        clearInterval(intervalId);  // Clear any existing timer
+        clearInterval(intervalId);
         setTimer(duration);
         const id = setInterval(() => {
             setTimer(prevTimer => {
@@ -722,6 +724,12 @@ function Exams() {
         } else {
             clearInterval(intervalId);
             calculateScore();
+        }
+    };
+
+    const handlePreviousQuestion = () => {
+        if (currentQuestionIndex > 0) {
+            setCurrentQuestionIndex(currentQuestionIndex - 1);
         }
     };
 
@@ -765,11 +773,15 @@ function Exams() {
 
     return (
         <section id="exams">
-            {!examStarted && <h2>EXAMEN DE AWS CLOUD PRACTITIONER</h2>}
-            <div className="exam-buttons">
-                <button onClick={() => startExam('CP1')}>Comenzar Examen Cloud Practitioner 1</button>
-            </div>
-            <br></br>
+            {!examStarted && (
+                <>
+                    <h2>EXAMEN DE AWS CLOUD PRACTITIONER</h2>
+                    <p>Para aprobar necesitas una puntuación de 42 preguntas correctas!</p>
+                    <div className="exam-buttons">
+                        <button onClick={() => startExam('CP1')}>Comenzar Examen Cloud Practitioner 1</button>
+                    </div>
+                </>
+            )}
             {selectedExam.length > 0 && score === null && (
                 <div id="examContent">
                     <div className="question">
@@ -791,23 +803,32 @@ function Exams() {
                             ))}
                         </ul>
                     </div>
-                    <button onClick={handleNextQuestion}>Siguiente</button>
+                    <div className="navigation-buttons">
+                        <button onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0}>Volver</button>
+                        <button onClick={handleNextQuestion}>{currentQuestionIndex < selectedExam.length - 1 ? 'Siguiente' : 'Finalizar'}</button>
+                    </div>
                 </div>
             )}
             {score !== null && (
                 <div id="score">
                     <h3>Examen completado</h3>
                     <p>Puntaje: {score} de {selectedExam.length}</p>
-                    <div className="explanations">
+                    <Accordion allowZeroExpanded>
                         {explanations.map((item, index) => (
-                            <div key={index} className={`explanation ${item.correct ? 'correct' : 'incorrect'}`}>
-                                <p><strong>{item.question}</strong></p>
-                                <p><strong>Tu respuesta fue: {item.selected}</strong></p>
-                                <p><strong>La respuesta correcta es: {item.correctAnswer}</strong></p>
-                                <p>Explicación: {item.explanation}</p>
-                            </div>
+                            <AccordionItem key={index}>
+                                <AccordionItemHeading>
+                                    <AccordionItemButton>
+                                        {item.question}
+                                    </AccordionItemButton>
+                                </AccordionItemHeading>
+                                <AccordionItemPanel>
+                                    <p><strong>Tu respuesta fue: {item.selected}</strong></p>
+                                    <p><strong>La respuesta correcta es: {item.correctAnswer}</strong></p>
+                                    <p>Explicación: {item.explanation}</p>
+                                </AccordionItemPanel>
+                            </AccordionItem>
                         ))}
-                    </div>
+                    </Accordion>
                 </div>
             )}
             {selectedExam.length > 0 && score === null && (
