@@ -1,23 +1,29 @@
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 20px;
+}
+
+.intro-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .intro {
     display: flex;
     align-items: center;
-    margin-bottom: 40px;
     background: linear-gradient(to right, #feffff, #ffffff);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .intro img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-right: 40px;
+    margin-right: 20px;
     border: 5px solid #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -39,6 +45,27 @@
     margin-bottom: 20px;
 }
 
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
 .contact-info {
     background: #fff;
     padding: 20px;
@@ -58,22 +85,56 @@
     margin-bottom: 20px;
 }
 
-.social-icons {
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-top: 20px;
 }
 
-.social-icons a {
-    display: inline-block;
-    margin-right: 20px;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    transition: transform 0.3s;
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #56b4c7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #005f99;
+    transform: translateY(-3px);
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

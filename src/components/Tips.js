@@ -3,7 +3,7 @@ import './Tips.css';
 
 const serviceAssociations = [
     { icon: '📦', term: 'Base de datos NoSQL', service: 'DynamoDB - Ideal para aplicaciones móviles y web con alta demanda de lectura y escritura.' },
-    { icon: '🪣', term: 'Bucket / Almacenamiento de objetos (object storage)', service: 'Amazon S3 - Almacenamiento de archivos y backups, incluyendo versiones y control de acceso.' },
+    { icon: '🗑', term: 'Bucket / Almacenamiento de objetos (object storage)', service: 'Amazon S3 - Almacenamiento de archivos y backups, incluyendo versiones y control de acceso.' },
     { icon: '💻', term: 'Computación bajo demanda (ON DEMAND)', service: 'Amazon EC2 - Ejecución de aplicaciones empresariales y servidores virtuales.' },
     { icon: '🌐', term: 'Entrega de contenido (Content delivery)', service: 'Amazon CloudFront - Distribución rápida de contenido globalmente, ideal para sitios web y streaming.' },
     { icon: '🔍', term: 'Monitorización y logs', service: 'Amazon CloudWatch - Monitoreo de recursos de AWS, logs y métricas personalizadas.' },

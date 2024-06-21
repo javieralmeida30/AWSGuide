@@ -20,7 +20,7 @@ function Exams() {
             {
                 question: "¿Cuál de las siguientes afirmaciones describe mejor el principio de privilegio mínimo en la gestión de políticas de AWS IAM?",
                 options: [
-                    "A. Proporcionar permisos basados en la antigüedad en el trabajo.",
+                    "A. Dar a los usuarios accesos completos a los servicios necesarios para sus tareas.",
                     "B. Dar a los usuarios acceso ilimitado y luego restringirlo según los requisitos.",
                     "C. Dar a los usuarios los permisos mínimos necesarios para completar sus tareas.",
                     "D. Dar acceso de administrador a todos los usuarios para facilitar la gestión."

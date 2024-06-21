@@ -9,7 +9,7 @@ function Home() {
     return (
       <div>
         <div className="header">
-          <h1>¡Bienvenidos Futuros AWS Certified Cloud Practitioner!</h1>
+          <h1>¡Bienvenidos Futuros AWS Certified Cloud Practitioners!</h1>
           <p>Esta es su solución para preparar el examen de AWS Cloud Practitioner.</p>
         </div>
         <div className="home-container">
@@ -27,8 +27,8 @@ function Home() {
               </p>
             </div>
             <div className="intro-image">
-              <img src={cloudPractitionerLogo} alt="AWS Cloud Practitioner Logo" />
               <img src={saaLogo} alt="AWS Solutions Architect Associate Logo" />
+              <img src={cloudPractitionerLogo} alt="AWS Cloud Practitioner Logo" />
             </div>
           </div>
           <div className="main-content">
