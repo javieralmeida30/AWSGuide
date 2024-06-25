@@ -1,15 +1,16 @@
 import React from 'react';
 import './Proyectos.css';
 import ec2Image from '../assets/ec2.png';
-import s3Image from '../assets/S3.png';
+import s3Image from '../assets/s3static.webp';
+import eventbridge from '../assets/eventbridge.png';
 import elasticBeanstalkImage from '../assets/beanstalk.png';
-import rekognitionImage from '../assets/rekognition.png';
+import rekognitionImage from '../assets/rekognition.jpg';
 
 function Proyectos() {
     return (
         <section id="proyectos">
             <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/automating_with_eventbridge.html" className="project" target="_blank" rel="noopener noreferrer">
-                <img src={ec2Image} alt="Programar una instancia EC2 para que se encienda y apague en un horario específico" />
+                <img src={eventbridge} alt="Programar una instancia EC2 para que se encienda y apague en un horario específico" />
                 <div className="project-info">
                     <h3>Programar una instancia EC2</h3>
                     <p>Utiliza Amazon EventBridge Scheduler para programar el encendido y apagado de una instancia EC2 en un horario específico.</p>
