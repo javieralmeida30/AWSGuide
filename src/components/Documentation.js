@@ -52,12 +52,14 @@ import storagegateway from "../assets/storagegateway.png";
 import neptune from "../assets/neptune.png";
 import amplify from "../assets/amplify.png";
 import appsync from "../assets/appsync.png";
+import lambda from "../assets/lambda.png";
+import fargate from "../assets/fargate.png";
 import memorydb from "../assets/memorydb.jpg";
 import s3glacier from "../assets/s3glacier.webp";
 
 function Documentation() {
-  const [expandedCategory, setExpandedCategory] = useState(null);
-  const [expandedSubCategory, setExpandedSubCategory] = useState(null);
+  const [activeTab, setActiveTab] = useState("Tecnologías y Conceptos");
+  const [activeSubCategory, setActiveSubCategory] = useState(null);
   const [serviceContent, setServiceContent] = useState({
     description: "",
     imageUrl: "",
@@ -96,31 +98,6 @@ function Documentation() {
           "Bases de Datos": ["Bases de datos, que es NoSQL y SQL"],
         },
         "Servicios de AWS": {
-          Analítica: [
-            "Amazon Athena",
-            "AWS Data Exchange",
-            "Amazon EMR",
-            "AWS Glue",
-            "Amazon Kinesis",
-            "Amazon MSK",
-            "Amazon OpenSearch Service",
-            "Amazon QuickSight",
-            "Amazon Redshift",
-          ],
-          "Integración de aplicaciones": [
-            "Amazon EventBridge",
-            "Amazon SNS",
-            "Amazon SQS",
-            "AWS Step Functions",
-            "Amazon SES",
-          ],
-          "Gestión financiera en la nube": [
-            "AWS Billing Conductor",
-            "AWS Budgets",
-            "AWS Cost and Usage Report",
-            "AWS Cost Explorer",
-            "AWS Marketplace",
-          ],
           Cómputo: [
             "AWS Batch",
             "Amazon EC2",
@@ -128,6 +105,7 @@ function Documentation() {
             "Amazon Lightsail",
             "AWS Outposts",
           ],
+          Serverless: ["AWS Fargate", "AWS Lambda"],
           Almacenamiento: [
             "AWS Backup",
             "Amazon EBS",
@@ -137,66 +115,6 @@ function Documentation() {
             "Amazon S3",
             "Amazon S3 Glacier",
             "AWS Storage Gateway",
-          ],
-          Contenedores: ["Amazon ECR", "Amazon ECS", "Amazon EKS"],
-          "Compromiso con el cliente": ["AWS Managed Services (AMS)", "AWS Support"],
-          "Bases de Datos": [
-            "Amazon Aurora",
-            "Amazon RDS",
-            "Amazon DynamoDB",
-            "Amazon MemoryDB for Redis",
-            "Amazon Neptune",
-          ],
-          "Herramientas de desarrollo": [
-            "AWS AppConfig",
-            "AWS CLI",
-            "AWS Cloud9",
-            "AWS CloudShell",
-            "AWS CodeArtifact",
-            "AWS CodeBuild",
-            "AWS CodeCommit",
-            "AWS CodeDeploy",
-            "AWS CodePipeline",
-            "AWS CodeStar",
-            "AWS X-Ray",
-          ],
-          "Frontend Web and Mobile": [
-            "AWS Amplify",
-            "AWS AppSync",
-          ],
-          "Machine Learning": [
-            "Amazon Comprehend",
-            "Amazon Kendra",
-            "Amazon Lex",
-            "Amazon Polly",
-            "Amazon Rekognition",
-            "Amazon SageMaker",
-            "Amazon Textract",
-            "Amazon Transcribe",
-            "Amazon Translate",
-          ],
-          "Gestión y Gobernanza": [
-            "AWS Auto Scaling",
-            "AWS CloudFormation",
-            "AWS CloudTrail",
-            "Amazon CloudWatch",
-            "AWS Compute Optimizer",
-            "AWS Config",
-            "AWS Control Tower",
-            "AWS Health Dashboard",
-            "AWS Management Console",
-            "AWS Organizations",
-            "AWS Service Catalog",
-            "AWS Systems Manager",
-            "AWS Trusted Advisor",
-            "AWS Well-Architected Tool",
-          ],
-          "Migración y Transferencia": [
-            "AWS Database Migration Service (AWS DMS)",
-            "AWS Migration Hub",
-            "AWS Schema Conversion Tool (AWS SCT)",
-            "AWS Snow Family",
-            "AWS Transfer Family",
           ],
           "Redes y entrega de contenido": [
             "Amazon API Gateway",
@@ -227,7 +145,91 @@ function Documentation() {
             "AWS Shield",
             "AWS WAF",
           ],
-          Serverless: ["AWS Fargate", "AWS Lambda"],
+          Contenedores: ["Amazon ECR", "Amazon ECS", "Amazon EKS"],
+          "Compromiso con el cliente": ["AWS Managed Services (AMS)", "AWS Support"],
+          "Bases de Datos": [
+            "Amazon Aurora",
+            "Amazon RDS",
+            "Amazon DynamoDB",
+            "Amazon MemoryDB for Redis",
+            "Amazon Neptune",
+          ],
+          Analítica: [
+            "Amazon Athena",
+            "AWS Data Exchange",
+            "Amazon EMR",
+            "AWS Glue",
+            "Amazon Kinesis",
+            "Amazon MSK",
+            "Amazon OpenSearch Service",
+            "Amazon QuickSight",
+            "Amazon Redshift",
+          ],
+          "Integración de aplicaciones": [
+            "Amazon EventBridge",
+            "Amazon SNS",
+            "Amazon SQS",
+            "AWS Step Functions",
+            "Amazon SES",
+          ],
+          "Gestión financiera en la nube": [
+            "AWS Billing Conductor",
+            "AWS Budgets",
+            "AWS Cost and Usage Report",
+            "AWS Cost Explorer",
+            "AWS Marketplace",
+          ],
+          "Migración y Transferencia": [
+            "AWS Database Migration Service (AWS DMS)",
+            "AWS Migration Hub",
+            "AWS Schema Conversion Tool (AWS SCT)",
+            "AWS Snow Family",
+            "AWS Transfer Family",
+          ],
+          "Gestión y Gobernanza": [
+            "AWS Auto Scaling",
+            "AWS CloudFormation",
+            "AWS CloudTrail",
+            "Amazon CloudWatch",
+            "AWS Compute Optimizer",
+            "AWS Config",
+            "AWS Control Tower",
+            "AWS Health Dashboard",
+            "AWS Management Console",
+            "AWS Organizations",
+            "AWS Service Catalog",
+            "AWS Systems Manager",
+            "AWS Trusted Advisor",
+            "AWS Well-Architected Tool",
+          ],
+          "Herramientas de desarrollo": [
+            "AWS AppConfig",
+            "AWS CLI",
+            "AWS Cloud9",
+            "AWS CloudShell",
+            "AWS CodeArtifact",
+            "AWS CodeBuild",
+            "AWS CodeCommit",
+            "AWS CodeDeploy",
+            "AWS CodePipeline",
+            "AWS CodeStar",
+            "AWS X-Ray",
+          ],
+          "Frontend Web and Mobile": [
+            "AWS Amplify",
+            "AWS AppSync",
+          ],
+          "Machine Learning": [
+            "Amazon Comprehend",
+            "Amazon Kendra",
+            "Amazon Lex",
+            "Amazon Polly",
+            "Amazon Rekognition",
+            "Amazon SageMaker",
+            "Amazon Textract",
+            "Amazon Transcribe",
+            "Amazon Translate",
+          ],
         },
       },
       services: {
@@ -1810,29 +1812,59 @@ function Documentation() {
         },
         "AWS Fargate": {
           description: `
-        <p>AWS Fargate facilita ejecutar contenedores sin necesidad de gestionar servidores o clusters de Amazon EC2. Proporciona una solución serverless para ejecutar contenedores, permitiendo a los desarrolladores centrarse en construir aplicaciones sin preocuparse por la infraestructura subyacente.</p>
-        <p>Características clave de AWS Fargate:</p>
-        <ul>
-            <li>Ejecución de contenedores serverless.</li>
-            <li>Escalabilidad automática basada en la demanda de la aplicación.</li>
-            <li>Integración con Amazon ECS y Amazon EKS.</li>
-        </ul>
-        <p>AWS Fargate es ideal para desarrolladores que buscan una solución sencilla y escalable para ejecutar contenedores en la nube.</p>
-    `,
-          imageUrl: "",
+            <p><strong>AWS Fargate</strong> facilita ejecutar contenedores sin necesidad de gestionar servidores o clusters de Amazon EC2. Proporciona una solución serverless para ejecutar contenedores, permitiendo a los desarrolladores centrarse en construir aplicaciones sin preocuparse por la infraestructura subyacente.</p>
+            <p>Características clave de AWS Fargate:</p>
+            <ul>
+                <li>Ejecución de contenedores serverless: No requiere gestionar instancias de servidor.</li>
+                <li>Escalabilidad automática: Escala automáticamente según la demanda de la aplicación, asegurando que siempre haya suficiente capacidad para manejar la carga.</li>
+                <li>Integración con Amazon ECS y Amazon EKS: Funciona de manera fluida con Amazon Elastic Container Service (ECS) y Amazon Elastic Kubernetes Service (EKS).</li>
+                <li>Seguridad mejorada: Aislamiento de tareas, proporcionando un entorno seguro para ejecutar contenedores.</li>
+                <li>Precios por segundo: Solo pagas por los recursos que tus contenedores utilizan.</li>
+            </ul>
+            <p>Casos de uso comunes para AWS Fargate:</p>
+            <ul>
+                <li>Aplicaciones microservicio: Despliegue y gestión de microservicios de manera eficiente.</li>
+                <li>Procesamiento en lotes: Ejecución de trabajos en segundo plano que requieren recursos temporales.</li>
+                <li>Aplicaciones web y APIs: Hospedaje de aplicaciones web y APIs con escalabilidad automática.</li>
+            </ul>
+            <p><strong>Beneficios de AWS Fargate:</strong></p>
+            <ul>
+                <li>Simplificación operativa: No es necesario gestionar servidores ni clústeres.</li>
+                <li>Mejora de la seguridad: Aislamiento mejorado y menos superficie de ataque.</li>
+                <li>Costos optimizados: Paga solo por lo que usas, con precios granulares.</li>
+                <li>Agilidad y rapidez: Despliega rápidamente aplicaciones sin preocuparte por la infraestructura.</li>
+            </ul>
+            <p><strong>Ejemplo práctico:</strong> Una empresa de e-commerce puede utilizar AWS Fargate para ejecutar su API de productos y servicios, asegurando que pueda escalar automáticamente durante periodos de alta demanda sin intervención manual.</p>
+          `,
+          imageUrl: fargate,
         },
         "AWS Lambda": {
           description: `
-        <p>AWS Lambda facilita ejecutar código sin aprovisionar o gestionar servidores. Paga solo por el tiempo de cómputo que consume y escala automáticamente según las necesidades de la aplicación.</p>
-        <p>Características clave de AWS Lambda:</p>
-        <ul>
-            <li>Ejecución de código serverless.</li>
-            <li>Soporte para múltiples lenguajes de programación.</li>
-            <li>Escalabilidad automática y alta disponibilidad.</li>
-        </ul>
-        <p>AWS Lambda es ideal para desarrolladores que necesitan ejecutar código en la nube sin gestionar infraestructura.</p>
-    `,
-          imageUrl: "",
+            <p><strong>AWS Lambda</strong> facilita ejecutar código sin aprovisionar o gestionar servidores. Paga solo por el tiempo de cómputo que consume y escala automáticamente según las necesidades de la aplicación.</p>
+            <p>Características clave de AWS Lambda:</p>
+            <ul>
+                <li>Ejecución de código serverless: Ejecuta código sin la necesidad de aprovisionar ni gestionar servidores.</li>
+                <li>Soporte para múltiples lenguajes de programación: Compatible con Node.js, Python, Java, C#, Go, y más.</li>
+                <li>Escalabilidad automática: Ajusta la capacidad automáticamente según la demanda de las funciones.</li>
+                <li>Integración con otros servicios de AWS: Se integra fácilmente con servicios como S3, DynamoDB, Kinesis, y más.</li>
+                <li>Monitoreo y registro: Monitoreo a través de AWS CloudWatch para rastrear el rendimiento y los errores.</li>
+            </ul>
+            <p>Casos de uso comunes para AWS Lambda:</p>
+            <ul>
+                <li>Procesamiento de datos en tiempo real: Procesamiento de flujos de datos en tiempo real desde servicios como Kinesis y DynamoDB.</li>
+                <li>Automatización de infraestructura: Ejecutar funciones en respuesta a cambios en la infraestructura (por ejemplo, cambios en S3, DynamoDB, etc.).</li>
+                <li>Backend para aplicaciones móviles: Construcción de backends escalables para aplicaciones móviles y web.</li>
+            </ul>
+            <p><strong>Beneficios de AWS Lambda:</strong></p>
+            <ul>
+                <li>Sin servidor: No es necesario gestionar servidores, lo que reduce la carga operativa.</li>
+                <li>Escalabilidad automática: Las funciones se escalan automáticamente en respuesta a la demanda.</li>
+                <li>Costos optimizados: Solo pagas por el tiempo de ejecución del código, lo que puede reducir costos significativamente.</li>
+                <li>Integración completa: Integración con muchos otros servicios de AWS para crear aplicaciones completas y eficientes.</li>
+            </ul>
+            <p><strong>Ejemplo práctico:</strong> Una empresa de medios puede utilizar AWS Lambda para procesar y transformar archivos multimedia subidos por los usuarios, ejecutando funciones Lambda en respuesta a eventos de carga en S3.</p>
+          `,
+          imageUrl: lambda,
         },
         "AWS Backup": {
           description: `
@@ -2021,15 +2053,14 @@ function Documentation() {
     },
   };
 
-  const handleCategoryClick = (category) => {
-    setExpandedCategory(expandedCategory === category ? null : category);
-    setExpandedSubCategory(null);
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    setActiveSubCategory(null);
+    setServiceContent({ description: "", imageUrl: "" });
   };
 
   const handleSubCategoryClick = (subCategory) => {
-    setExpandedSubCategory(
-      expandedSubCategory === subCategory ? null : subCategory
-    );
+    setActiveSubCategory(subCategory);
   };
 
   const handleServiceClick = (service) => {
@@ -2038,52 +2069,55 @@ function Documentation() {
 
   return (
     <section id="documentation">
+      <div className="tabs">
+        {Object.keys(levels.CP.categories).map((tab) => (
+          <button
+            key={tab}
+            className={tab === activeTab ? "active" : ""}
+            onClick={() => handleTabClick(tab)}
+          >
+            {tab}
+          </button>
+        ))}
+      </div>
       <div className="documentation-content">
         <div className="sidebar">
-          {levels.CP.categories &&
-            Object.keys(levels.CP.categories).map((category) => (
-              <div key={category}>
-                <h3 onClick={() => handleCategoryClick(category)}>
-                  {category}
-                </h3>
-                {expandedCategory === category && (
-                  <div>
-                    {Object.keys(levels.CP.categories[category]).map(
-                      (subCategory) => (
-                        <div key={subCategory}>
-                          <h4
-                            onClick={() => handleSubCategoryClick(subCategory)}
-                          >
-                            {subCategory}
-                          </h4>
-                          {expandedSubCategory === subCategory && (
-                            <ul>
-                              {levels.CP.categories[category][subCategory].map(
-                                (service) => (
-                                  <li
-                                    key={service}
-                                    onClick={() => handleServiceClick(service)}
-                                  >
-                                    {service}
-                                  </li>
-                                )
-                              )}
-                            </ul>
-                          )}
-                        </div>
+          {levels.CP.categories[activeTab] &&
+            Object.keys(levels.CP.categories[activeTab]).map((subCategory) => (
+              <div key={subCategory}>
+                <h4
+                  className={subCategory === activeSubCategory ? "active" : ""}
+                  onClick={() => handleSubCategoryClick(subCategory)}
+                >
+                  {subCategory}
+                </h4>
+                {activeSubCategory === subCategory && (
+                  <ul>
+                    {levels.CP.categories[activeTab][subCategory].map(
+                      (service) => (
+                        <li
+                          key={service}
+                          onClick={() => handleServiceClick(service)}
+                        >
+                          {service}
+                        </li>
                       )
                     )}
-                  </div>
+                  </ul>
                 )}
               </div>
             ))}
         </div>
         <div className="service-content">
-          <p
-            dangerouslySetInnerHTML={{ __html: serviceContent.description }}
-          ></p>
-          {serviceContent.imageUrl && (
-            <img src={serviceContent.imageUrl} alt="Service" />
+          {serviceContent.description && (
+            <>
+              <p
+                dangerouslySetInnerHTML={{ __html: serviceContent.description }}
+              ></p>
+              {serviceContent.imageUrl && (
+                <img src={serviceContent.imageUrl} alt="Service" />
+              )}
+            </>
           )}
         </div>
       </div>
