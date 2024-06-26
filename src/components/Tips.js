@@ -52,13 +52,21 @@ const serviceAssociations = [
 const generalTips = [
     { tip: 'Entender el modelo de responsabilidad compartida' },
     { tip: 'Practicar con la capa gratuita de AWS'},
-    { tip: 'Entender el pilar del AWS well-architected framework'},
-    { tip: 'Leer la documentación oficial de AWS'},
-    { tip: 'Realizar los laboratorios y tutoriales de AWS'},
-    { tip: 'Utilizar preguntas de práctica y exámenes simulados'},
-    { tip: 'Asistir a webinars y cursos de AWS'},
-    { tip: 'Seguir las mejores prácticas de seguridad de AWS'}
+    { tip: 'Familiarizarse con los servicios principales de AWS: EC2, S3, RDS, Lambda' },
+    { tip: 'Conocer los diferentes niveles de soporte de AWS y sus características' },
+    { tip: 'Entender el concepto de alta disponibilidad y recuperación ante desastres en AWS' },
+    { tip: 'Leer la documentación oficial de AWS y los whitepapers relevantes' },
+    { tip: 'Realizar los laboratorios y tutoriales de AWS para obtener experiencia práctica' },
+    { tip: 'Utilizar preguntas de práctica y exámenes simulados para evaluar tu conocimiento' },
+    { tip: 'Asistir a webinars, cursos de AWS y AWS Skill Builder' },
+    { tip: 'Seguir las mejores prácticas de seguridad de AWS, incluyendo IAM y encriptación' },
+    { tip: 'Comprender el pilar de Excelencia Operacional del AWS Well-Architected Framework' },
+    { tip: 'Estudiar los casos de uso comunes de AWS y cómo los servicios se integran para resolver problemas de negocio' },
+    { tip: 'Utilizar recursos de estudio adicionales como A Cloud Guru, Stephane Mareek y Linux Academy' },
+    { tip: 'Participar en comunidades y foros de AWS para resolver dudas y compartir experiencias' },
+    { tip: 'Mantenerse actualizado con las nuevas características y servicios de AWS' }
 ];
+
 
 function Tips() {
     return (
@@ -75,18 +83,14 @@ function Tips() {
                     </div>
                 ))}
             </div>
-            <br></br>
-            <div className="tips-content">
-                <div className="card">
-                    <h3>Consejos Generales</h3>
-                    <ul>
-                        {generalTips.map((item, index) => (
-                            <li key={index}>
-                                <strong>{item.tip}</strong> {item.description}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+            <br />
+            <h3>Consejos Generales</h3>
+            <div className="tips-horizontal">
+                {generalTips.map((item, index) => (
+                    <div className="card" key={index}>
+                        <strong>{item.tip}</strong>
+                    </div>
+                ))}
             </div>
         </section>
     );

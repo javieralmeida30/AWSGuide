@@ -1,4 +1,3 @@
-/* Fondo con degradado */
 body {
     background: linear-gradient(to right, #ffeb3b, #ffc107);
     font-family: Arial, sans-serif;
@@ -18,11 +17,23 @@ h2 {
     color: #333;
 }
 
-.tips-content {
+h3 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #333;
+}
+
+.tips-content, .tips-horizontal {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.tips-horizontal {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
 }
 
 .card {

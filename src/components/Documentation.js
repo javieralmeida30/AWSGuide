@@ -28,7 +28,32 @@ import DynamoDB from "../assets/dynamodb.png";
 import cloud9 from "../assets/cloud9.png";
 import cloudshell from "../assets/cloudshell.png";
 import awscli from "../assets/awcli.png";
+import eventbridge1 from "../assets/eventbridge1.png";
 import kubernetes from "../assets/kubernetes.webp";
+import sqs from "../assets/sqs.png";
+import billing from "../assets/billing.jpg";
+import marketplace from "../assets/marketplace.webp";
+import costandusage from "../assets/costandusage.png";
+import budgets from "../assets/budgets.png";
+import costexplorer from "../assets/costexplorer.png";
+import stepf from "../assets/stepf.png";
+import amazonec2 from "../assets/amazonec2.png";
+import elasticbeanstalk from "../assets/elasticbeanstalk.png";
+import ecs from "../assets/ecs.png";
+import eks from "../assets/eks.png";
+import ecr from "../assets/ecr.png";
+import ebs from "../assets/ebs.png";
+import efs from "../assets/efs.png";
+import fsx from "../assets/fsx.png";
+import s3detail from "../assets/s3detail.jpg";
+import recovery from "../assets/recovery.png";
+import backup from "../assets/backup.png";
+import storagegateway from "../assets/storagegateway.png";
+import neptune from "../assets/neptune.png";
+import amplify from "../assets/amplify.png";
+import appsync from "../assets/appsync.png";
+import memorydb from "../assets/memorydb.jpg";
+import s3glacier from "../assets/s3glacier.webp";
 
 function Documentation() {
   const [expandedCategory, setExpandedCategory] = useState(null);
@@ -53,7 +78,7 @@ function Documentation() {
             "Planes de soporte de AWS",
             "AWS Well-Architected Framework",
           ],
-          Compute: [
+          Cómputo: [
             "Tipos de instancias de Amazon EC2 (por ejemplo, Reserved, On-Demand, Spot)",
             "Contenedores, Clústeres, Imágenes, Kubernetes",
           ],
@@ -71,7 +96,7 @@ function Documentation() {
           "Bases de Datos": ["Bases de datos, que es NoSQL y SQL"],
         },
         "Servicios de AWS": {
-          Analytics: [
+          Analítica: [
             "Amazon Athena",
             "AWS Data Exchange",
             "Amazon EMR",
@@ -82,37 +107,47 @@ function Documentation() {
             "Amazon QuickSight",
             "Amazon Redshift",
           ],
-          "Application Integration": [
+          "Integración de aplicaciones": [
             "Amazon EventBridge",
             "Amazon SNS",
             "Amazon SQS",
             "AWS Step Functions",
             "Amazon SES",
           ],
-          "Cloud Financial Management": [
+          "Gestión financiera en la nube": [
             "AWS Billing Conductor",
             "AWS Budgets",
             "AWS Cost and Usage Report",
             "AWS Cost Explorer",
             "AWS Marketplace",
           ],
-          Compute: [
+          Cómputo: [
             "AWS Batch",
             "Amazon EC2",
             "AWS Elastic Beanstalk",
             "Amazon Lightsail",
             "AWS Outposts",
           ],
-          Containers: ["Amazon ECR", "Amazon ECS", "Amazon EKS"],
-          "Customer Engagement": ["AWS Managed Services (AMS)", "AWS Support"],
-          Database: [
+          Almacenamiento: [
+            "AWS Backup",
+            "Amazon EBS",
+            "Amazon EFS",
+            "AWS Elastic Disaster Recovery",
+            "Amazon FSx",
+            "Amazon S3",
+            "Amazon S3 Glacier",
+            "AWS Storage Gateway",
+          ],
+          Contenedores: ["Amazon ECR", "Amazon ECS", "Amazon EKS"],
+          "Compromiso con el cliente": ["AWS Managed Services (AMS)", "AWS Support"],
+          "Bases de Datos": [
             "Amazon Aurora",
             "Amazon RDS",
             "Amazon DynamoDB",
             "Amazon MemoryDB for Redis",
             "Amazon Neptune",
           ],
-          "Developer Tools": [
+          "Herramientas de desarrollo": [
             "AWS AppConfig",
             "AWS CLI",
             "AWS Cloud9",
@@ -140,7 +175,7 @@ function Documentation() {
             "Amazon Transcribe",
             "Amazon Translate",
           ],
-          "Management and Governance": [
+          "Gestión y Gobernanza": [
             "AWS Auto Scaling",
             "AWS CloudFormation",
             "AWS CloudTrail",
@@ -156,14 +191,14 @@ function Documentation() {
             "AWS Trusted Advisor",
             "AWS Well-Architected Tool",
           ],
-          "Migration and Transfer": [
+          "Migración y Transferencia": [
             "AWS Database Migration Service (AWS DMS)",
             "AWS Migration Hub",
             "AWS Schema Conversion Tool (AWS SCT)",
             "AWS Snow Family",
             "AWS Transfer Family",
           ],
-          "Networking and Content Delivery": [
+          "Redes y entrega de contenido": [
             "Amazon API Gateway",
             "Amazon CloudFront",
             "AWS Direct Connect",
@@ -172,7 +207,7 @@ function Documentation() {
             "Amazon VPC",
             "AWS VPN",
           ],
-          "Security, Identity, and Compliance": [
+          "Seguridad, identidad y cumplimiento": [
             "AWS Artifact",
             "AWS Certificate Manager (ACM)",
             "AWS CloudHSM",
@@ -193,16 +228,6 @@ function Documentation() {
             "AWS WAF",
           ],
           Serverless: ["AWS Fargate", "AWS Lambda"],
-          Storage: [
-            "AWS Backup",
-            "Amazon EBS",
-            "Amazon EFS",
-            "AWS Elastic Disaster Recovery",
-            "Amazon FSx",
-            "Amazon S3",
-            "Amazon S3 Glacier",
-            "AWS Storage Gateway",
-          ],
         },
       },
       services: {
@@ -479,7 +504,7 @@ function Documentation() {
             <h4>Ejemplo Práctico:</h4>
             <p>Imagina una tienda en línea que utiliza EventBridge para automatizar el proceso de notificación de pedidos. Cuando un cliente realiza una compra, se genera un evento que activa una función Lambda para procesar el pago. Luego, otro evento activa un flujo de trabajo en Step Functions que gestiona el inventario y la logística de envío.</p>
           `,
-          imageUrl: "",
+          imageUrl: eventbridge1,
         },
         "Amazon SNS": {
           description: `
@@ -499,7 +524,7 @@ function Documentation() {
             <h4>Ejemplo Práctico:</h4>
             <p>Imagina una aplicación de procesamiento de imágenes que recibe miles de solicitudes por minuto. Puedes utilizar SQS para colocar las solicitudes en una cola. Los trabajadores independientes pueden procesar las imágenes desde la cola, garantizando que cada solicitud se maneje de manera eficiente y sin pérdida de datos.</p>
           `,
-          imageUrl: "",
+          imageUrl: sqs, 
         },
         "AWS Step Functions": {
           description: `
@@ -509,7 +534,7 @@ function Documentation() {
             <h4>Ejemplo Práctico:</h4>
             <p>Considera un proceso de aprobación de préstamos en un banco. Con Step Functions, puedes crear un flujo de trabajo que incluye la verificación de crédito, la validación de ingresos y la revisión manual. Cada paso se puede ejecutar de manera secuencial, asegurando que todas las validaciones se completen antes de pasar al siguiente paso.</p>
           `,
-          imageUrl: "",
+          imageUrl: stepf,
         },
         "Amazon Connect": {
           description: `
@@ -539,7 +564,7 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que eres un proveedor de servicios en la nube que ofrece soluciones a varias empresas. Con AWS Billing Conductor, puedes generar facturas separadas para cada cliente, detallando los servicios utilizados y los costos asociados, asegurando que cada cliente reciba una factura precisa y comprensible.</p>
             `,
-            imageUrl: "",
+            imageUrl: billing,
           },
           "AWS Budgets": {
             description: `
@@ -553,7 +578,7 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Supongamos que diriges un equipo de desarrollo con un presupuesto mensual de $5,000 para servicios en la nube. Con AWS Budgets, puedes configurar alertas para recibir notificaciones cuando el gasto alcance el 80% del presupuesto, permitiéndote revisar el uso de recursos y tomar medidas correctivas antes de superar el límite.</p>
             `,
-            imageUrl: "",
+            imageUrl: budgets,
           },
           "AWS Cost and Usage Report": {
             description: `
@@ -567,7 +592,7 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que gestionas una empresa que utiliza múltiples servicios de AWS en varias cuentas. Con AWS Cost and Usage Report, puedes generar informes que detallan los costos y el uso por departamento, servicio y proyecto, facilitando la asignación precisa de costos y la identificación de áreas para optimización.</p>
             `,
-            imageUrl: "",
+            imageUrl: costandusage,
           },
           "AWS Cost Explorer": {
             description: `
@@ -581,7 +606,7 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Supongamos que eres responsable de la administración de costos de una aplicación SaaS. Utilizando AWS Cost Explorer, puedes crear gráficos que muestren el aumento de costos en relación con el crecimiento de usuarios, permitiéndote ajustar la infraestructura y planificar presupuestos de manera más precisa.</p>
             `,
-            imageUrl: "",
+            imageUrl: costexplorer,
           },
           "AWS Marketplace": {
             description: `
@@ -595,7 +620,7 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que necesitas un software de seguridad para proteger tus aplicaciones en la nube. Con AWS Marketplace, puedes buscar y seleccionar una solución de seguridad adecuada, desplegarla rápidamente en tu entorno AWS y gestionar su uso y suscripción desde una única consola.</p>
             `,
-            imageUrl: "",
+            imageUrl: marketplace,
           },        
           "AWS Batch": {
             description: `
@@ -628,7 +653,7 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Supongamos que estás desarrollando una aplicación de análisis de big data que necesita procesar grandes volúmenes de datos en tiempo real. Con Amazon EC2, puedes desplegar instancias optimizadas para computación que manejen estas cargas de trabajo intensivas, escalando hacia arriba durante los picos de uso y hacia abajo cuando la demanda disminuya, optimizando costos y rendimiento.</p>
             `,
-            imageUrl:"",
+            imageUrl: amazonec2,
           },
           "AWS Elastic Beanstalk": {
             description: `
@@ -644,7 +669,7 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que desarrollas una aplicación web de comercio electrónico que necesita manejar grandes volúmenes de tráfico durante eventos promocionales. Con AWS Elastic Beanstalk, puedes desplegar rápidamente tu aplicación y confiar en que se escalará automáticamente para manejar picos de tráfico, sin preocuparte por la infraestructura subyacente.</p>
             `,
-            imageUrl: "",
+            imageUrl: elasticbeanstalk,
           },
           "Amazon Lightsail": {
             description: `
@@ -687,7 +712,7 @@ function Documentation() {
                 </ul>
                 <p>Amazon ECR es ideal para equipos de desarrollo que buscan una solución segura y escalable para gestionar y desplegar sus imágenes de contenedor Docker en AWS.</p>
             `,
-          imageUrl: "",
+          imageUrl: ecr,
         },
         "Amazon ECS": {
           description: `
@@ -701,7 +726,7 @@ function Documentation() {
                 </ul>
                 <p>Amazon ECS es ideal para organizaciones que desean ejecutar aplicaciones de contenedores en producción, aprovechando la infraestructura escalable y segura de AWS.</p>
             `,
-          imageUrl: "",
+          imageUrl: ecs,
         },
         "Amazon EKS": {
           description: `
@@ -715,7 +740,7 @@ function Documentation() {
                 </ul>
                 <p>Amazon EKS es ideal para organizaciones que desean ejecutar cargas de trabajo de Kubernetes en producción, aprovechando la gestión automática y la integración con otros servicios de AWS.</p>
             `,
-          imageUrl: "",
+          imageUrl: eks,
         },
         "AWS Managed Services (AMS)": {
           description: `
@@ -820,7 +845,7 @@ function Documentation() {
             
             <p>Amazon MemoryDB for Redis es ideal para desarrolladores que buscan una base de datos en memoria gestionada y de alto rendimiento, proporcionando la combinación perfecta de compatibilidad con Redis, alta disponibilidad y rendimiento excepcional.</p>
           `,
-          imageUrl: "",
+          imageUrl: memorydb,
         },
         "Amazon Neptune": {
           description: `
@@ -850,7 +875,7 @@ function Documentation() {
             
             <p>Amazon Neptune es ideal para desarrolladores que necesitan gestionar y analizar relaciones complejas en grandes volúmenes de datos, proporcionando un rendimiento superior y capacidades avanzadas de consulta de gráficos.</p>
           `,
-          imageUrl: "",
+          imageUrl: neptune,
         },
         "Amazon RDS": {
           description: `
@@ -1042,7 +1067,7 @@ function Documentation() {
         </ul>
         <p>AWS Amplify es ideal para desarrolladores que buscan una solución completa para crear y escalar aplicaciones web y móviles modernas.</p>
     `,
-          imageUrl: "",
+          imageUrl: amplify,
         },
         "AWS AppSync": {
           description: `
@@ -1055,7 +1080,7 @@ function Documentation() {
         </ul>
         <p>AWS AppSync es ideal para desarrolladores que necesitan construir aplicaciones móviles y web con actualizaciones de datos en tiempo real y una API GraphQL robusta.</p>
     `,
-          imageUrl: "",
+          imageUrl: appsync,
         },
         "Amazon Comprehend": {
           description: `
@@ -1175,188 +1200,213 @@ function Documentation() {
     `,
           imageUrl: "",
         },
-        "AWS Auto Scaling": {
-          description: `
-            <p>AWS Auto Scaling facilita configurar el escalado automático para sus recursos de AWS. Ajusta automáticamente la capacidad de computación para mantener un rendimiento estable y predecible al menor costo posible.</p>
-            <p>Características clave de AWS Auto Scaling:</p>
-            <ul>
-                <li>Escalado automático para EC2, ECS, DynamoDB, Aurora y más.</li>
-                <li>Optimización del rendimiento y reducción de costos.</li>
-                <li>Configuración basada en la demanda de la carga de trabajo.</li>
-            </ul>
-            <p>Ideal para mantener el rendimiento y optimizar costos en entornos variables.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS CloudFormation": {
-          description: `
-            <p>AWS CloudFormation facilita modelar y configurar sus recursos de AWS utilizando plantillas, reduciendo el tiempo de gestión de la infraestructura.</p>
-            <p>Características clave de AWS CloudFormation:</p>
-            <ul>
-                <li>Automatización completa de la infraestructura mediante plantillas.</li>
-                <li>Control de versiones y replicación de entornos.</li>
-                <li>Integración con otros servicios de AWS para automatización avanzada.</li>
-            </ul>
-            <p>Ideal para gestionar infraestructuras complejas de manera eficiente y coherente.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS CloudTrail": {
-          description: `
-            <p>AWS CloudTrail facilita la gobernanza, el cumplimiento y la auditoría operativa de su cuenta de AWS, registrando todas las acciones realizadas en su cuenta.</p>
-            <p>Características clave de AWS CloudTrail:</p>
-            <ul>
-                <li>Registro detallado de actividades de API.</li>
-                <li>Monitoreo continuo y alertas de actividades sospechosas.</li>
-                <li>Integración con AWS CloudWatch y AWS Config para mayor control.</li>
-            </ul>
-            <p>Esencial para mantener la seguridad y el cumplimiento en entornos de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "Amazon CloudWatch": {
-          description: `
-            <p>Amazon CloudWatch facilita monitorear y gestionar aplicaciones y servicios en AWS, proporcionando datos y conocimientos procesables.</p>
-            <p>Características clave de Amazon CloudWatch:</p>
-            <ul>
-                <li>Monitoreo en tiempo real de métricas de sistema y aplicación.</li>
-                <li>Creación de alarmas para notificaciones y acciones automatizadas.</li>
-                <li>Capacidades de log y monitoreo de logs con CloudWatch Logs.</li>
-            </ul>
-            <p>Ideal para mantener la salud y el rendimiento de sus aplicaciones y servicios.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Compute Optimizer": {
-          description: `
-            <p>AWS Compute Optimizer facilita recomendar recursos de cómputo óptimos para mejorar el rendimiento y reducir costos.</p>
-            <p>Características clave de AWS Compute Optimizer:</p>
-            <ul>
-                <li>Recomendaciones basadas en el análisis de métricas de uso.</li>
-                <li>Optimización para instancias EC2, volúmenes de EBS y más.</li>
-                <li>Mejora del rendimiento y reducción de costos.</li>
-            </ul>
-            <p>Ideal para asegurarse de que está utilizando los recursos de cómputo más eficientes para sus cargas de trabajo.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Config": {
-          description: `
-            <p>AWS Config facilita evaluar, auditar y evaluar las configuraciones de sus recursos de AWS, proporcionando un inventario detallado y un historial de configuraciones.</p>
-            <p>Características clave de AWS Config:</p>
-            <ul>
-                <li>Monitoreo continuo de configuraciones de recursos.</li>
-                <li>Evaluaciones de conformidad basadas en reglas predefinidas.</li>
-                <li>Integración con AWS CloudTrail para auditorías detalladas.</li>
-            </ul>
-            <p>Esencial para mantener la conformidad y la gobernanza de los recursos de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Control Tower": {
-          description: `
-            <p>AWS Control Tower facilita configurar y gobernar un entorno de múltiples cuentas de AWS seguro y bien arquitectado, proporcionando un entorno preconfigurado y automatizado.</p>
-            <p>Características clave de AWS Control Tower:</p>
-            <ul>
-                <li>Configuración automatizada de entornos de múltiples cuentas.</li>
-                <li>Guardrails de seguridad y conformidad preconfigurados.</li>
-                <li>Monitoreo continuo y visibilidad de todo el entorno de AWS.</li>
-            </ul>
-            <p>Ideal para organizaciones que necesitan una gestión centralizada y gobernanza de múltiples cuentas de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Health Dashboard": {
-          description: `
-            <p>AWS Health Dashboard proporciona visibilidad a eventos y recomendaciones de AWS para ayudar a gestionar su salud operativa, ofreciendo una vista centralizada de la salud de sus servicios de AWS.</p>
-            <p>Características clave de AWS Health Dashboard:</p>
-            <ul>
-                <li>Monitoreo de la salud de los servicios de AWS en tiempo real.</li>
-                <li>Alertas y notificaciones personalizadas para eventos relevantes.</li>
-                <li>Recomendaciones proactivas para mantener la salud operativa.</li>
-            </ul>
-            <p>Esencial para mantener la visibilidad y la salud de sus servicios de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Management Console": {
-          description: `
-            <p>AWS Management Console facilita gestionar sus recursos de AWS con una interfaz web sencilla y gráfica, proporcionando una vista centralizada de todos sus servicios de AWS.</p>
-            <p>Características clave de AWS Management Console:</p>
-            <ul>
-                <li>Interfaz gráfica intuitiva para la gestión de recursos.</li>
-                <li>Acceso a todos los servicios de AWS desde un solo lugar.</li>
-                <li>Herramientas de monitoreo y administración integradas.</li>
-            </ul>
-            <p>Ideal para administradores y usuarios que prefieren una interfaz gráfica para gestionar sus recursos de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Organizations": {
-          description: `
-            <p>AWS Organizations facilita gestionar y gobernar sus entornos de AWS a medida que su negocio escala y crece, permitiendo consolidar varias cuentas de AWS en una organización.</p>
-            <p>Características clave de AWS Organizations:</p>
-            <ul>
-                <li>Gestión centralizada de múltiples cuentas de AWS.</li>
-                <li>Aplicación de políticas de seguridad y conformidad a nivel de organización.</li>
-                <li>Consolidación de facturación para todas las cuentas de la organización.</li>
-            </ul>
-            <p>Ideal para grandes empresas y organizaciones que necesitan una gestión centralizada y gobernanza de múltiples cuentas de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Service Catalog": {
-          description: `
-            <p>AWS Service Catalog facilita crear y gestionar catálogos de servicios de TI aprobados en AWS, permitiendo a las organizaciones estandarizar las ofertas de servicios de TI.</p>
-            <p>Características clave de AWS Service Catalog:</p>
-            <ul>
-                <li>Creación de catálogos de servicios aprobados.</li>
-                <li>Gestión de versiones y actualizaciones de productos de catálogo.</li>
-                <li>Control de acceso y permisos para la utilización de productos de catálogo.</li>
-            </ul>
-            <p>Ideal para organizaciones que desean estandarizar y gestionar sus ofertas de servicios de TI en AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Systems Manager": {
-          description: `
-            <p>AWS Systems Manager facilita ver y controlar su infraestructura de AWS a medida que crece, proporcionando una interfaz unificada para gestionar recursos y automatizar tareas operativas.</p>
-            <p>Características clave de AWS Systems Manager:</p>
-            <ul>
-                <li>Automatización de tareas operativas.</li>
-                <li>Gestión centralizada de recursos y configuraciones.</li>
-                <li>Monitoreo y administración de estado de recursos.</li>
-            </ul>
-            <p>Ideal para administradores que necesitan una herramienta completa para gestionar y automatizar su infraestructura de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Trusted Advisor": {
-          description: `
-            <p>AWS Trusted Advisor facilita optimizar su infraestructura de AWS, mejorar la seguridad y el rendimiento, y reducir costos, proporcionando recomendaciones personalizadas basadas en las mejores prácticas de AWS.</p>
-            <p>Características clave de AWS Trusted Advisor:</p>
-            <ul>
-                <li>Recomendaciones para optimizar costos y rendimiento.</li>
-                <li>Mejoras en la seguridad y la tolerancia a fallos.</li>
-                <li>Monitoreo continuo de límites de servicio.</li>
-            </ul>
-            <p>Ideal para organizaciones que desean mejorar la eficiencia y la seguridad de su infraestructura de AWS.</p>
-          `,
-          imageUrl: "",
-        },
-        "AWS Well-Architected Tool": {
-          description: `
-            <p>AWS Well-Architected Tool facilita revisar el estado de sus cargas de trabajo y comparar las mejores prácticas arquitectónicas de AWS, proporcionando una evaluación detallada y recomendaciones para mejorar la arquitectura de sus aplicaciones.</p>
-            <p>Características clave de AWS Well-Architected Tool:</p>
-            <ul>
-                <li>Evaluación de cargas de trabajo basada en los cinco pilares del Well-Architected Framework.</li>
-                <li>Recomendaciones para mejorar la arquitectura y alinearla con las mejores prácticas de AWS.</li>
-                <li>Seguimiento del progreso de las mejoras arquitectónicas.</li>
-            </ul>
-            <p>Ideal para arquitectos y equipos de desarrollo que desean asegurarse de que sus aplicaciones están bien diseñadas y optimizadas.</p>
-          `,
-          imageUrl: "",
-        },
+          "AWS Auto Scaling": {
+            description: `
+              <p>AWS Auto Scaling facilita configurar el escalado automático para sus recursos de AWS. Ajusta automáticamente la capacidad de computación para mantener un rendimiento estable y predecible al menor costo posible.</p>
+              <p>Características clave de AWS Auto Scaling:</p>
+              <ul>
+                  <li>Escalado automático para EC2, ECS, DynamoDB, Aurora y más.</li>
+                  <li>Optimización del rendimiento y reducción de costos.</li>
+                  <li>Configuración basada en la demanda de la carga de trabajo.</li>
+              </ul>
+              <p>Ideal para mantener el rendimiento y optimizar costos en entornos variables.</p>
+              <p><strong>Caso práctico:</strong> Imagina que tienes una aplicación web con picos de tráfico durante ciertas horas del día. Con AWS Auto Scaling, puedes configurar políticas para agregar más instancias EC2 cuando el tráfico aumenta y reducirlas cuando el tráfico disminuye, garantizando así un rendimiento constante sin pagar por recursos ociosos.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS CloudFormation": {
+            description: `
+              <p>AWS CloudFormation facilita modelar y configurar sus recursos de AWS utilizando plantillas, reduciendo el tiempo de gestión de la infraestructura.</p>
+              <p>Características clave de AWS CloudFormation:</p>
+              <ul>
+                  <li>Automatización completa de la infraestructura mediante plantillas.</li>
+                  <li>Control de versiones y replicación de entornos.</li>
+                  <li>Integración con otros servicios de AWS para automatización avanzada.</li>
+              </ul>
+              <p>Ideal para gestionar infraestructuras complejas de manera eficiente y coherente.</p>
+              <p><strong>Caso práctico:</strong> Supongamos que tienes una aplicación que necesita un conjunto específico de recursos AWS (EC2, RDS, S3, etc.). Con AWS CloudFormation, puedes definir estos recursos en una plantilla y desplegar la infraestructura completa con un solo comando, asegurando consistencia y reduciendo errores manuales.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS CloudTrail": {
+            description: `
+              <p>AWS CloudTrail facilita la gobernanza, el cumplimiento y la auditoría operativa de su cuenta de AWS, registrando todas las acciones realizadas en su cuenta.</p>
+              <p>Características clave de AWS CloudTrail:</p>
+              <ul>
+                  <li>Registro detallado de actividades de API.</li>
+                  <li>Monitoreo continuo y alertas de actividades sospechosas.</li>
+                  <li>Integración con AWS CloudWatch y AWS Config para mayor control.</li>
+              </ul>
+              <p>Esencial para mantener la seguridad y el cumplimiento en entornos de AWS.</p>
+              <p><strong>Auditoría:</strong> La auditoría se refiere a la revisión y análisis de los registros de actividad para asegurarse de que se están siguiendo las políticas y procedimientos adecuados.</p>
+              <p><strong>Caso práctico:</strong> Si necesitas investigar un acceso no autorizado a tu infraestructura, puedes usar AWS CloudTrail para revisar los registros de actividad y determinar quién accedió a qué recurso y cuándo, ayudando en la auditoría y resolución de incidentes de seguridad.</p>
+            `,
+            imageUrl: ""
+          },
+          "Amazon CloudWatch": {
+            description: `
+              <p>Amazon CloudWatch facilita monitorear y gestionar aplicaciones y servicios en AWS, proporcionando datos y conocimientos procesables.</p>
+              <p>Características clave de Amazon CloudWatch:</p>
+              <ul>
+                  <li>Monitoreo en tiempo real de métricas de sistema y aplicación.</li>
+                  <li>Creación de alarmas para notificaciones y acciones automatizadas.</li>
+                  <li>Capacidades de log y monitoreo de logs con CloudWatch Logs.</li>
+              </ul>
+              <p>Ideal para mantener la salud y el rendimiento de sus aplicaciones y servicios.</p>
+              <p><strong>Monitoreo:</strong> El monitoreo implica observar continuamente el rendimiento de los recursos y aplicaciones para identificar y responder a posibles problemas.</p>
+              <p><strong>Caso práctico:</strong> Si tu aplicación web experimenta una disminución en el rendimiento, puedes usar Amazon CloudWatch para monitorear las métricas de CPU y memoria de tus instancias EC2, crear alarmas para ser notificado si se alcanzan ciertos umbrales, y tomar acciones automatizadas como reiniciar instancias o escalar horizontalmente.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Compute Optimizer": {
+            description: `
+              <p>AWS Compute Optimizer facilita recomendar recursos de cómputo óptimos para mejorar el rendimiento y reducir costos.</p>
+              <p>Características clave de AWS Compute Optimizer:</p>
+              <ul>
+                  <li>Recomendaciones basadas en el análisis de métricas de uso.</li>
+                  <li>Optimización para instancias EC2, volúmenes de EBS y más.</li>
+                  <li>Mejora del rendimiento y reducción de costos.</li>
+              </ul>
+              <p>Ideal para asegurarse de que está utilizando los recursos de cómputo más eficientes para sus cargas de trabajo.</p>
+              <p><strong>Optimización:</strong> La optimización se refiere a ajustar los recursos y configuraciones para obtener el mejor rendimiento posible al menor costo.</p>
+              <p><strong>Caso práctico:</strong> Si tienes una instancia EC2 que está subutilizada, AWS Compute Optimizer puede recomendarte cambiar a un tipo de instancia más pequeño para reducir costos, o si una instancia está sobrecargada, recomendar un tipo más grande para mejorar el rendimiento.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Config": {
+            description: `
+              <p>AWS Config facilita evaluar, auditar y evaluar las configuraciones de sus recursos de AWS, proporcionando un inventario detallado y un historial de configuraciones.</p>
+              <p>Características clave de AWS Config:</p>
+              <ul>
+                  <li>Monitoreo continuo de configuraciones de recursos.</li>
+                  <li>Evaluaciones de conformidad basadas en reglas predefinidas.</li>
+                  <li>Integración con AWS CloudTrail para auditorías detalladas.</li>
+              </ul>
+              <p>Esencial para mantener la conformidad y la gobernanza de los recursos de AWS.</p>
+              <p><strong>Auditoría:</strong> La auditoría implica revisar y analizar las configuraciones y actividades para asegurarse de que cumplen con las políticas y estándares establecidos.</p>
+              <p><strong>Caso práctico:</strong> Si necesitas asegurarte de que todas tus instancias EC2 cumplen con ciertos requisitos de seguridad (como estar dentro de un grupo de seguridad específico), puedes usar AWS Config para monitorear estas configuraciones y recibir alertas si alguna instancia no cumple con las reglas establecidas.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Control Tower": {
+            description: `
+              <p>AWS Control Tower facilita configurar y gobernar un entorno de múltiples cuentas de AWS seguro y bien arquitectado, proporcionando un entorno preconfigurado y automatizado.</p>
+              <p>Características clave de AWS Control Tower:</p>
+              <ul>
+                  <li>Configuración automatizada de entornos de múltiples cuentas.</li>
+                  <li>Guardrails de seguridad y conformidad preconfigurados.</li>
+                  <li>Monitoreo continuo y visibilidad de todo el entorno de AWS.</li>
+              </ul>
+              <p>Ideal para organizaciones que necesitan una gestión centralizada y gobernanza de múltiples cuentas de AWS.</p>
+              <p><strong>Guardrails:</strong> Los guardrails son políticas preconfiguradas que ayudan a asegurar que las cuentas y recursos sigan las mejores prácticas y estándares de seguridad.</p>
+              <p><strong>Caso práctico:</strong> Una gran empresa que maneja múltiples cuentas de AWS para diferentes departamentos puede usar AWS Control Tower para configurar políticas de seguridad y conformidad a nivel de toda la organización, asegurando que todas las cuentas sigan las mejores prácticas sin la necesidad de configurarlas manualmente una por una.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Health Dashboard": {
+            description: `
+              <p>AWS Health Dashboard proporciona visibilidad a eventos y recomendaciones de AWS para ayudar a gestionar su salud operativa, ofreciendo una vista centralizada de la salud de sus servicios de AWS.</p>
+              <p>Características clave de AWS Health Dashboard:</p>
+              <ul>
+                  <li>Monitoreo de la salud de los servicios de AWS en tiempo real.</li>
+                  <li>Alertas y notificaciones personalizadas para eventos relevantes.</li>
+                  <li>Recomendaciones proactivas para mantener la salud operativa.</li>
+              </ul>
+              <p>Esencial para mantener la visibilidad y la salud de sus servicios de AWS.</p>
+              <p><strong>Caso práctico:</strong> Si un servicio de AWS que estás utilizando tiene una interrupción, AWS Health Dashboard te notificará del problema y proporcionará actualizaciones en tiempo real sobre el estado del servicio y recomendaciones sobre cómo mitigar el impacto en tus aplicaciones.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Management Console": {
+            description: `
+              <p>AWS Management Console facilita gestionar sus recursos de AWS con una interfaz web sencilla y gráfica, proporcionando una vista centralizada de todos sus servicios de AWS.</p>
+              <p>Características clave de AWS Management Console:</p>
+              <ul>
+                  <li>Interfaz gráfica intuitiva para la gestión de recursos.</li>
+                  <li>Acceso a todos los servicios de AWS desde un solo lugar.</li>
+                  <li>Herramientas de monitoreo y administración integradas.</li>
+              </ul>
+              <p>Ideal para administradores y usuarios que prefieren una interfaz gráfica para gestionar sus recursos de AWS.</p>
+              <p><strong>Interfaz gráfica:</strong> Una interfaz gráfica es una forma visual de interactuar con los servicios y recursos, usando botones, menús y ventanas en lugar de comandos de texto.</p>
+              <p><strong>Caso práctico:</strong> Si eres un administrador que prefiere no usar la línea de comandos, puedes utilizar la AWS Management Console para lanzar instancias EC2, configurar servicios de S3 y monitorear tus recursos de manera visual e intuitiva.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Organizations": {
+            description: `
+              <p>AWS Organizations facilita gestionar y gobernar sus entornos de AWS a medida que su negocio escala y crece, permitiendo consolidar varias cuentas de AWS en una organización.</p>
+              <p>Características clave de AWS Organizations:</p>
+              <ul>
+                  <li>Gestión centralizada de múltiples cuentas de AWS.</li>
+                  <li>Aplicación de políticas de seguridad y conformidad a nivel de organización.</li>
+                  <li>Consolidación de facturación para todas las cuentas de la organización.</li>
+              </ul>
+              <p>Ideal para grandes empresas y organizaciones que necesitan una gestión centralizada y gobernanza de múltiples cuentas de AWS.</p>
+              <p><strong>Consolidación de facturación:</strong> La consolidación de facturación permite agrupar los costos de todas las cuentas de AWS en una sola factura, simplificando la gestión de pagos y aprovechando descuentos por volumen.</p>
+              <p><strong>Caso práctico:</strong> Una empresa con diferentes departamentos que usan sus propias cuentas de AWS puede usar AWS Organizations para aplicar políticas de seguridad a todas las cuentas, monitorear el uso y consolidar los costos en una sola factura, facilitando la gestión financiera y de cumplimiento.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Service Catalog": {
+            description: `
+              <p>AWS Service Catalog facilita crear y gestionar catálogos de servicios de TI aprobados en AWS, permitiendo a las organizaciones estandarizar las ofertas de servicios de TI.</p>
+              <p>Características clave de AWS Service Catalog:</p>
+              <ul>
+                  <li>Creación de catálogos de servicios aprobados.</li>
+                  <li>Gestión de versiones y actualizaciones de productos de catálogo.</li>
+                  <li>Control de acceso y permisos para la utilización de productos de catálogo.</li>
+              </ul>
+              <p>Ideal para organizaciones que desean estandarizar y gestionar sus ofertas de servicios de TI en AWS.</p>
+              <p><strong>Catálogo de servicios:</strong> Un catálogo de servicios es una colección organizada de recursos y servicios aprobados que los usuarios pueden desplegar y utilizar, asegurando que se sigan las políticas y estándares de la organización.</p>
+              <p><strong>Caso práctico:</strong> Una empresa de TI puede crear un catálogo de servicios con configuraciones aprobadas de instancias EC2, bases de datos y redes, permitiendo a los empleados desplegar estos recursos de manera rápida y conforme a las políticas de la empresa.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Systems Manager": {
+            description: `
+              <p>AWS Systems Manager facilita ver y controlar su infraestructura de AWS a medida que crece, proporcionando una interfaz unificada para gestionar recursos y automatizar tareas operativas.</p>
+              <p>Características clave de AWS Systems Manager:</p>
+              <ul>
+                  <li>Automatización de tareas operativas.</li>
+                  <li>Gestión centralizada de recursos y configuraciones.</li>
+                  <li>Monitoreo y administración de estado de recursos.</li>
+              </ul>
+              <p>Ideal para administradores que necesitan una herramienta completa para gestionar y automatizar su infraestructura de AWS.</p>
+              <p><strong>Automatización:</strong> La automatización implica usar herramientas y scripts para realizar tareas repetitivas sin intervención manual, ahorrando tiempo y reduciendo errores.</p>
+              <p><strong>Caso práctico:</strong> Si necesitas aplicar parches de seguridad a cientos de instancias EC2, puedes usar AWS Systems Manager para automatizar este proceso, asegurando que todas las instancias estén actualizadas sin tener que hacerlo manualmente una por una.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Trusted Advisor": {
+            description: `
+              <p>AWS Trusted Advisor facilita optimizar su infraestructura de AWS, mejorar la seguridad y el rendimiento, y reducir costos, proporcionando recomendaciones personalizadas basadas en las mejores prácticas de AWS.</p>
+              <p>Características clave de AWS Trusted Advisor:</p>
+              <ul>
+                  <li>Recomendaciones para optimizar costos y rendimiento.</li>
+                  <li>Mejoras en la seguridad y la tolerancia a fallos.</li>
+                  <li>Monitoreo continuo de límites de servicio.</li>
+              </ul>
+              <p>Ideal para organizaciones que desean mejorar la eficiencia y la seguridad de su infraestructura de AWS.</p>
+              <p><strong>Recomendaciones personalizadas:</strong> Las recomendaciones personalizadas son sugerencias específicas basadas en la configuración y uso actual de tus recursos, ayudándote a mejorar y optimizar tu infraestructura.</p>
+              <p><strong>Caso práctico:</strong> AWS Trusted Advisor puede recomendar eliminar instancias EC2 no utilizadas para reducir costos, habilitar Multi-Factor Authentication (MFA) para mejorar la seguridad, y ajustar configuraciones para mejorar el rendimiento de las aplicaciones.</p>
+            `,
+            imageUrl: ""
+          },
+          "AWS Well-Architected Tool": {
+            description: `
+              <p>AWS Well-Architected Tool facilita revisar el estado de sus cargas de trabajo y comparar las mejores prácticas arquitectónicas de AWS, proporcionando una evaluación detallada y recomendaciones para mejorar la arquitectura de sus aplicaciones.</p>
+              <p>Características clave de AWS Well-Architected Tool:</p>
+              <ul>
+                  <li>Evaluación de cargas de trabajo basada en los cinco pilares del Well-Architected Framework.</li>
+                  <li>Recomendaciones para mejorar la arquitectura y alinearla con las mejores prácticas de AWS.</li>
+                  <li>Seguimiento del progreso de las mejoras arquitectónicas.</li>
+              </ul>
+              <p>Ideal para arquitectos y equipos de desarrollo que desean asegurarse de que sus aplicaciones están bien diseñadas y optimizadas.</p>
+              <p><strong>Well-Architected Framework:</strong> El Well-Architected Framework es un conjunto de mejores prácticas de AWS dividido en cinco pilares: Excelencia Operacional, Seguridad, Fiabilidad, Eficiencia de Rendimiento y Optimización de Costos.</p>
+              <p><strong>Caso práctico:</strong> Si estás desarrollando una nueva aplicación, puedes usar la AWS Well-Architected Tool para evaluar tu arquitectura actual, recibir recomendaciones sobre cómo mejorarla y asegurarte de que cumple con las mejores prácticas de AWS en términos de seguridad, eficiencia y costos.</p>
+            `,
+            imageUrl: ""
+          },        
         "AWS Database Migration Service (AWS DMS)": {
           description: `
         <p>AWS Database Migration Service facilita migrar bases de datos a AWS de manera rápida y segura. DMS soporta migraciones homogéneas (por ejemplo, Oracle a Oracle) y heterogéneas (por ejemplo, Oracle a Aurora), permitiendo a las organizaciones mover sus bases de datos a la nube con mínima interrupción.</p>
@@ -1795,7 +1845,7 @@ function Documentation() {
         </ul>
         <p>AWS Backup es ideal para organizaciones que necesitan proteger sus datos de manera centralizada y automatizada.</p>
     `,
-          imageUrl: "",
+          imageUrl: backup,
         },
         "Amazon EBS": {
           description: `
@@ -1808,7 +1858,7 @@ function Documentation() {
         </ul>
         <p>Amazon EBS es ideal para aplicaciones que requieren almacenamiento en bloque persistente y de alto rendimiento.</p>
     `,
-          imageUrl: "",
+          imageUrl: ebs,
         },
         "Amazon EFS": {
           description: `
@@ -1821,7 +1871,7 @@ function Documentation() {
         </ul>
         <p>Amazon EFS es ideal para aplicaciones que requieren almacenamiento de archivos compartido y escalable.</p>
     `,
-          imageUrl: "",
+          imageUrl: efs,
         },
         "AWS Elastic Disaster Recovery": {
           description: `
@@ -1834,7 +1884,7 @@ function Documentation() {
         </ul>
         <p>AWS Elastic Disaster Recovery es ideal para organizaciones que necesitan una solución robusta para la recuperación ante desastres y la continuidad del negocio.</p>
     `,
-          imageUrl: "",
+          imageUrl: recovery,
         },
         "Amazon FSx": {
           description: `
@@ -1847,7 +1897,7 @@ function Documentation() {
         </ul>
         <p>Amazon FSx es ideal para organizaciones que necesitan sistemas de archivos de alto rendimiento y gestionados en la nube.</p>
     `,
-          imageUrl: "",
+          imageUrl: fsx,
         },
         "Amazon S3": {
           description: `
@@ -1860,7 +1910,7 @@ function Documentation() {
         </ul>
         <p>Amazon S3 es ideal para una variedad de casos de uso como almacenamiento de datos, copias de seguridad, archivado y distribución de contenido estático.</p>
     `,
-          imageUrl: "",
+          imageUrl: s3detail,
         },
         "Amazon S3 Glacier": {
           description: `
@@ -1873,7 +1923,7 @@ function Documentation() {
         </ul>
         <p>Amazon S3 Glacier es ideal para organizaciones que necesitan una solución económica y segura para el almacenamiento de datos a largo plazo.</p>
     `,
-          imageUrl: "",
+          imageUrl: s3glacier,
         },
         "Modelo de responsabilidad compartida de AWS": {
           description: `
@@ -1965,7 +2015,7 @@ function Documentation() {
         </ul>
         <p>AWS Storage Gateway es ideal para organizaciones que desean aprovechar la escalabilidad y durabilidad del almacenamiento en la nube de AWS mientras mantienen un acceso rápido y eficiente a los datos desde sus instalaciones locales.</p>
     `,
-          imageUrl: "",
+          imageUrl: storagegateway,
         },
       },
     },
@@ -1988,14 +2038,6 @@ function Documentation() {
 
   return (
     <section id="documentation">
-      <h2>Documentación</h2>
-      <p>
-        En esta sección encontrarás información detallada sobre los servicios y
-        conceptos de AWS que son relevantes para los exámenes de la
-        certificación de Cloud Practitioner y próximamente de Solutions
-        Architect Associate. Explora los servicios disponibles en cada
-        categoría.
-      </p>
       <div className="documentation-content">
         <div className="sidebar">
           {levels.CP.categories &&
