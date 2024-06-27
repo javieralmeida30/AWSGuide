@@ -23,13 +23,18 @@ function Contact() {
             message: formData.message,
         };
 
-        emailjs.send('service_z0iwh5e', 'template_y0vk2th', templateParams, '2gblVkwFy0E1OWjSM')
-            .then((response) => {
-                console.log('SUCCESS!', response.status, response.text);
-                setSubmitted(true);
-            }, (err) => {
-                console.log('FAILED...', err);
-            });
+        emailjs.send(
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+            templateParams,
+            process.env.REACT_APP_EMAILJS_USER_ID
+        )
+        .then((response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            setSubmitted(true);
+        }, (err) => {
+            console.log('FAILED...', err);
+        });
     };
 
     return (
