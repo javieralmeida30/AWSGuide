@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AWSGuide/static/css/main.a98f3855.css",
-    "main.js": "/AWSGuide/static/js/main.5f779207.js",
+    "main.js": "/AWSGuide/static/js/main.4ee2ddbb.js",
     "static/media/eventbridge.png": "/AWSGuide/static/media/eventbridge.05d6ce16f3b359ea8281.png",
     "static/media/xray.jpg": "/AWSGuide/static/media/xray.0db7ccf18abd7d21741e.jpg",
     "static/media/s3static.webp": "/AWSGuide/static/media/s3static.f623e415314ab6458b29.webp",
@@ -96,7 +96,6 @@
     "static/media/efs.png": "/AWSGuide/static/media/efs.0fd74898c846d71a1a0d.png",
     "static/media/cloud-practitioner-logo.png": "/AWSGuide/static/media/cloud-practitioner-logo.f685d63a35961ca83875.png",
     "static/media/lightsail.webp": "/AWSGuide/static/media/lightsail.34e2cd15417804967bcd.webp",
-    "static/media/ec2.png": "/AWSGuide/static/media/ec2.b04fe75ac7302096e21a.png",
     "static/media/exchange.png": "/AWSGuide/static/media/exchange.22f21dc62ab88a0fbd7a.png",
     "static/media/nosqlsql.avif": "/AWSGuide/static/media/nosqlsql.b7834c28339e93a9031f.avif",
     "static/media/lambda.png": "/AWSGuide/static/media/lambda.0044c153fb885bc90394.png",
@@ -111,10 +110,10 @@
     "static/media/autoscaling.png": "/AWSGuide/static/media/autoscaling.9225aa820351f21d770f.png",
     "index.html": "/AWSGuide/index.html",
     "main.a98f3855.css.map": "/AWSGuide/static/css/main.a98f3855.css.map",
-    "main.5f779207.js.map": "/AWSGuide/static/js/main.5f779207.js.map"
+    "main.4ee2ddbb.js.map": "/AWSGuide/static/js/main.4ee2ddbb.js.map"
   },
   "entrypoints": [
     "static/css/main.a98f3855.css",
-    "static/js/main.5f779207.js"
+    "static/js/main.4ee2ddbb.js"
   ]
 }
