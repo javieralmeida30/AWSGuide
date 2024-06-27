@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AWSGuide/static/css/main.a98f3855.css",
+    "main.css": "/AWSGuide/static/css/main.d749e624.css",
     "main.js": "/AWSGuide/static/js/main.a7ff0780.js",
     "static/media/eventbridge.png": "/AWSGuide/static/media/eventbridge.05d6ce16f3b359ea8281.png",
     "static/media/xray.jpg": "/AWSGuide/static/media/xray.0db7ccf18abd7d21741e.jpg",
@@ -109,11 +109,11 @@
     "static/media/amazonvpc.png": "/AWSGuide/static/media/amazonvpc.2675569e7a9fa7e52f9f.png",
     "static/media/autoscaling.png": "/AWSGuide/static/media/autoscaling.9225aa820351f21d770f.png",
     "index.html": "/AWSGuide/index.html",
-    "main.a98f3855.css.map": "/AWSGuide/static/css/main.a98f3855.css.map",
+    "main.d749e624.css.map": "/AWSGuide/static/css/main.d749e624.css.map",
     "main.a7ff0780.js.map": "/AWSGuide/static/js/main.a7ff0780.js.map"
   },
   "entrypoints": [
-    "static/css/main.a98f3855.css",
+    "static/css/main.d749e624.css",
     "static/js/main.a7ff0780.js"
   ]
 }
