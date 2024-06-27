@@ -125,7 +125,6 @@ function Documentation() {
             "AWS Compliance",
             "AWS Pricing Calculator",
             "AWS SDKs",
-            "AWS Support Center",
             "Planes de soporte de AWS",
             "AWS Well-Architected Framework",
           ],
