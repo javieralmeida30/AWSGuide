@@ -23,17 +23,12 @@ h3 {
     color: #333;
 }
 
-.tips-content, .tips-horizontal {
+.tips-content,
+.tips-horizontal {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.tips-horizontal {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 0;
 }
 
 .card {
@@ -93,4 +88,11 @@ h3 {
     display: block;
     font-size: 1.3em;
     color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
 }

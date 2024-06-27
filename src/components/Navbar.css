@@ -27,6 +27,18 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #052d35;
-    transform: translateY(-2px); /* Añadido efecto de hover */
+    transform: translateY(-2px);
     border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
 }

@@ -1,27 +1,27 @@
 /* Añadir estilos para el header dentro de Home.css */
 .header {
     text-align: center;
-    padding: 10px 0; /* Reducido el padding para ocupar menos espacio vertical */
+    padding: 10px 0;
     background-color: #f0f8ff;
     border-bottom: 1px solid #ddd;
 }
 
 .header h1 {
     color: black;
-    font-size: 2em; /* Reducido tamaño */
+    font-size: 2em;
     margin: 0;
 }
 
 .header p {
-    font-size: 1em; /* Reducido tamaño */
+    font-size: 1em;
     margin: 0;
-    padding-top: 5px; /* Reducido padding-top */
+    padding-top: 5px;
 }
 
 .home-container {
     padding: 20px;
-    max-width: 1000px; /* Reducido el ancho máximo */
-    margin: 20px auto; /* Ajustado margen */
+    max-width: 1000px;
+    margin: 20px auto;
     background-color: #f0f8ff;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -29,30 +29,31 @@
 
 .intro-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; /* Reducido el margen inferior */
-    text-align: left;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .intro-text {
     flex: 2;
-    max-width: 500px; /* Ajustado max-width */
-    text-align: left;
+    max-width: 500px;
+    text-align: center;
 }
 
 .intro-text h1 {
     color: #110d0d;
-    font-size: 28px; /* Reducido tamaño */
+    font-size: 28px;
     margin-bottom: 20px;
     text-align: center;
 }
 
 .intro-text p {
-    font-size: 16px; /* Reducido tamaño */
+    font-size: 16px;
     color: #555;
     margin-bottom: 10px;
 }
@@ -66,35 +67,35 @@
 }
 
 .intro-image img {
-    width: 120px; /* Reducido tamaño */
+    width: 120px;
     height: auto;
 }
 
 .main-content {
     text-align: center;
-    padding: 20px 20px; /* Reducido padding superior */
+    padding: 20px 20px;
 }
 
 .main-content h2 {
     color: #333;
-    font-size: 24px; /* Reducido tamaño */
-    margin-bottom: 20px; /* Reducido margen inferior */
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 .button-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Reducido el espacio entre botones */
+    gap: 10px;
 }
 
 .home-button {
     background-color: #ffffff;
     color: #000000;
     text-decoration: none;
-    padding: 15px; /* Ajustado padding */
+    padding: 15px;
     border-radius: 10px;
-    width: 200px; /* Ajustado ancho */
+    width: 200px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s;
@@ -107,10 +108,26 @@
 
 .home-button h3 {
     margin-top: 0;
-    font-size: 20px; /* Reducido tamaño */
+    font-size: 20px;
 }
 
 .home-button p {
     margin: 10px 0 0;
-    font-size: 14px; /* Reducido tamaño */
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+    }
+
+    .intro-image {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .intro-text {
+        text-align: center;
+    }
 }

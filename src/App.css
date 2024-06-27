@@ -18,10 +18,13 @@ nav ul {
   margin: 0;
   background-color: #005f73;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav ul li {
-  float: left;
+  display: inline;
 }
 
 nav ul li a {
@@ -38,4 +41,16 @@ nav ul li a:hover {
 
 section {
   padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin-bottom: 10px;
+  }
 }

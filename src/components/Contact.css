@@ -12,6 +12,7 @@
 
 .intro {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background: linear-gradient(to right, #feffff, #ffffff);
     padding: 20px;
@@ -23,7 +24,7 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-bottom: 20px;
     border: 5px solid #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -31,6 +32,7 @@
 .text {
     flex: 1;
     color: rgb(7, 5, 5);
+    text-align: center;
 }
 
 .text h2 {
@@ -48,6 +50,7 @@
 .social-icons {
     margin-top: 20px;
     display: flex;
+    justify-content: center;
     gap: 10px;
 }
 
@@ -137,4 +140,19 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+    }
+
+    .intro img {
+        margin-bottom: 20px;
+    }
+
+    .text {
+        text-align: center;
+    }
 }

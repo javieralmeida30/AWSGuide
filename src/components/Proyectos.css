@@ -4,19 +4,19 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 40px; /* Espacio entre proyectos */
+    gap: 20px; /* Reducido el espacio entre proyectos */
 }
 
 .project {
     display: flex;
-    flex-wrap: wrap; /* Permite que el contenido se ajuste */
+    flex-wrap: wrap;
     background: linear-gradient(to right, #ffffff, #ffffff);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    overflow: hidden; /* Asegura que el contenido no se desborde */
+    overflow: hidden;
     color: rgb(0, 0, 0);
-    text-decoration: none; /* Quita el subrayado del enlace */
+    text-decoration: none;
 }
 
 .project:hover {
@@ -26,8 +26,8 @@
 
 .project img {
     width: 100%;
-    max-width: 300px;
-    height: auto; /* Permite que la imagen mantenga su proporción */
+    max-width: 200px; /* Reducido el tamaño máximo de la imagen */
+    height: auto;
     object-fit: cover;
     border-radius: 10px 0 0 10px;
 }
@@ -41,13 +41,25 @@
 }
 
 .project-info h3 {
-    font-size: 24px;
+    font-size: 20px; /* Reducido tamaño */
     margin-bottom: 10px;
     text-align: center;
 }
 
 .project-info p {
-    font-size: 16px;
+    font-size: 14px; /* Reducido tamaño */
     line-height: 1.6;
     text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project img {
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
 }

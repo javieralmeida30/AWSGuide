@@ -161,3 +161,19 @@
 .incorrect {
     border-left: 8px solid #f44336;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .question {
+        width: 90%;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .exam-controls {
+        flex-direction: column;
+    }
+}
