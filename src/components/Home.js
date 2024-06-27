@@ -43,8 +43,8 @@ function Home() {
                 <p>Preguntas interactivas para evaluar tus conocimientos.</p>
               </Link>
               <Link to="/tips" className="home-button">
-                <h3>Trucos y Consejos</h3>
-                <p>Consejos para aprobar los exámenes y asociar servicios.</p>
+                <h3>Asociaciones</h3>
+                <p>Consejos para aprobar los exámenes y asociar servicios a términos.</p>
               </Link>
               <Link to="/proyectos" className="home-button">
                 <h3>Ideas de Proyectos</h3>

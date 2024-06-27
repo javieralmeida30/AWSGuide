@@ -16,7 +16,7 @@ body {
   }
   
   .tabs button {
-    background-color: #005f73;
+    background-color: #45a9bd;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -28,7 +28,7 @@ body {
   }
   
   .tabs button:hover, .tabs button.active {
-    background-color: #01424f;
+    background-color: #17889e;
   }
   
   .documentation-content {

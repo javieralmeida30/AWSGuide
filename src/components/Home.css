@@ -89,8 +89,8 @@
 }
 
 .home-button {
-    background-color: #56b4c7;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #000000;
     text-decoration: none;
     padding: 15px; /* Ajustado padding */
     border-radius: 10px;
@@ -101,7 +101,7 @@
 }
 
 .home-button:hover {
-    background-color: #005f99;
+    background-color: #35adc5;
     transform: translateY(-5px);
 }
 

@@ -56,6 +56,27 @@ import lambda from "../assets/lambda.png";
 import fargate from "../assets/fargate.png";
 import memorydb from "../assets/memorydb.jpg";
 import s3glacier from "../assets/s3glacier.webp";
+import amazonvpc from "../assets/amazonvpc.png";
+import apigateway from "../assets/apigateway.png";
+import awsvpn from "../assets/awsvpn.png";
+import cloudfront from "../assets/cloudfront.png";
+import directconnect from "../assets/directconnect.png";
+import route53 from "../assets/route53.png";
+import globalaccelerator from "../assets/globalaccelerator.png";
+import acm from "../assets/acm.png";
+import artifact from "../assets/artifact.png";
+import cognito from "../assets/cognito.png";
+import hsm from "../assets/hsm.png";
+import hub from "../assets/hub.png";
+import duty from "../assets/duty.png";
+import iam from "../assets/iam.png";
+import inspector from "../assets/inspector.png";
+import kms from "../assets/kms.png";
+import macie from "../assets/macie.png";
+import secretmanager from "../assets/secretmanager.png";
+import shield from "../assets/shield.png";
+import waf from "../assets/waf.png";
+
 
 function Documentation() {
   const [activeTab, setActiveTab] = useState("Tecnologías y Conceptos");
@@ -130,23 +151,17 @@ function Documentation() {
             "AWS Certificate Manager (ACM)",
             "AWS CloudHSM",
             "Amazon Cognito",
-            "AWS Directory Service",
-            "AWS Firewall Manager",
             "Amazon GuardDuty",
             "AWS IAM",
-            "AWS IAM Identity Center (AWS Single Sign-On)",
             "Amazon Inspector",
             "AWS Key Management Service (AWS KMS)",
             "Amazon Macie",
-            "AWS Network Firewall",
-            "AWS Resource Access Manager (AWS RAM)",
             "AWS Secrets Manager",
             "AWS Security Hub",
             "AWS Shield",
             "AWS WAF",
           ],
           Contenedores: ["Amazon ECR", "Amazon ECS", "Amazon EKS"],
-          "Compromiso con el cliente": ["AWS Managed Services (AMS)", "AWS Support"],
           "Bases de Datos": [
             "Amazon Aurora",
             "Amazon RDS",
@@ -215,10 +230,7 @@ function Documentation() {
             "AWS CodeStar",
             "AWS X-Ray",
           ],
-          "Frontend Web and Mobile": [
-            "AWS Amplify",
-            "AWS AppSync",
-          ],
+          "Frontend Web and Mobile": ["AWS Amplify", "AWS AppSync"],
           "Machine Learning": [
             "Amazon Comprehend",
             "Amazon Kendra",
@@ -322,8 +334,8 @@ function Documentation() {
           <h4>Ejemplo Práctico:</h4>
           <p>Imagina que desarrollas una aplicación web moderna que utiliza microservicios para diferentes funcionalidades (autenticación, pagos, notificaciones). Puedes utilizar Docker para crear contenedores para cada microservicio, almacenarlos en Amazon ECR, y desplegarlos en un clúster de EKS.</p>
         `,
-        imageUrl: kubernetes,
-      },
+          imageUrl: kubernetes,
+        },
         "Machine learning": {
           description: `
                     <p>Machine Learning es una rama de la inteligencia artificial que se enfoca en el desarrollo de algoritmos que permiten a las máquinas aprender y tomar decisiones basadas en datos. En lugar de ser programadas explícitamente para realizar una tarea específica, las máquinas usan patrones y relaciones en los datos para mejorar su desempeño a lo largo del tiempo.</p>
@@ -526,7 +538,7 @@ function Documentation() {
             <h4>Ejemplo Práctico:</h4>
             <p>Imagina una aplicación de procesamiento de imágenes que recibe miles de solicitudes por minuto. Puedes utilizar SQS para colocar las solicitudes en una cola. Los trabajadores independientes pueden procesar las imágenes desde la cola, garantizando que cada solicitud se maneje de manera eficiente y sin pérdida de datos.</p>
           `,
-          imageUrl: sqs, 
+          imageUrl: sqs,
         },
         "AWS Step Functions": {
           description: `
@@ -554,8 +566,8 @@ function Documentation() {
             `,
           imageUrl: "",
         },
-          "AWS Billing Conductor": {
-            description: `
+        "AWS Billing Conductor": {
+          description: `
               <p>AWS Billing Conductor es un servicio que facilita la creación de facturas detalladas y personalizadas para tus clientes. Este servicio ayuda a organizar y administrar tus costos y facturas en la nube de manera eficiente. Con AWS Billing Conductor, puedes:</p>
               <ul>
                   <li><strong>Personalizar la Presentación de Facturas:</strong> Ajusta cómo se presentan los costos en las facturas, agrupando por proyectos, equipos, departamentos o cualquier otra estructura que se ajuste a tu modelo de negocio.</li>
@@ -566,10 +578,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que eres un proveedor de servicios en la nube que ofrece soluciones a varias empresas. Con AWS Billing Conductor, puedes generar facturas separadas para cada cliente, detallando los servicios utilizados y los costos asociados, asegurando que cada cliente reciba una factura precisa y comprensible.</p>
             `,
-            imageUrl: billing,
-          },
-          "AWS Budgets": {
-            description: `
+          imageUrl: billing,
+        },
+        "AWS Budgets": {
+          description: `
               <p>AWS Budgets permite crear y gestionar presupuestos personalizados que te alertan cuando tus costos o uso superan los umbrales definidos. Con AWS Budgets, puedes:</p>
               <ul>
                   <li><strong>Configuración de Alertas:</strong> Configura alertas basadas en costos previstos, uso de servicios y reservas, recibiendo notificaciones por correo electrónico o SMS cuando se acerquen o superen los límites establecidos.</li>
@@ -580,10 +592,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Supongamos que diriges un equipo de desarrollo con un presupuesto mensual de $5,000 para servicios en la nube. Con AWS Budgets, puedes configurar alertas para recibir notificaciones cuando el gasto alcance el 80% del presupuesto, permitiéndote revisar el uso de recursos y tomar medidas correctivas antes de superar el límite.</p>
             `,
-            imageUrl: budgets,
-          },
-          "AWS Cost and Usage Report": {
-            description: `
+          imageUrl: budgets,
+        },
+        "AWS Cost and Usage Report": {
+          description: `
               <p>AWS Cost and Usage Report (CUR) proporciona los detalles más completos de tus costos y uso de AWS, organizados por cuenta y agrupados por servicios y etiquetas. Con AWS CUR, puedes:</p>
               <ul>
                   <li><strong>Informe Detallado:</strong> Accede a informes detallados que muestran el desglose de costos y uso, permitiéndote analizar y comprender mejor tus gastos en la nube.</li>
@@ -594,10 +606,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que gestionas una empresa que utiliza múltiples servicios de AWS en varias cuentas. Con AWS Cost and Usage Report, puedes generar informes que detallan los costos y el uso por departamento, servicio y proyecto, facilitando la asignación precisa de costos y la identificación de áreas para optimización.</p>
             `,
-            imageUrl: costandusage,
-          },
-          "AWS Cost Explorer": {
-            description: `
+          imageUrl: costandusage,
+        },
+        "AWS Cost Explorer": {
+          description: `
               <p>AWS Cost Explorer facilita visualizar, comprender y gestionar tus costos y uso de AWS a lo largo del tiempo. Con Cost Explorer, puedes:</p>
               <ul>
                   <li><strong>Informes Personalizados:</strong> Crea informes personalizados que muestran tus gastos y uso de AWS de manera clara y detallada.</li>
@@ -608,10 +620,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Supongamos que eres responsable de la administración de costos de una aplicación SaaS. Utilizando AWS Cost Explorer, puedes crear gráficos que muestren el aumento de costos en relación con el crecimiento de usuarios, permitiéndote ajustar la infraestructura y planificar presupuestos de manera más precisa.</p>
             `,
-            imageUrl: costexplorer,
-          },
-          "AWS Marketplace": {
-            description: `
+          imageUrl: costexplorer,
+        },
+        "AWS Marketplace": {
+          description: `
               <p>AWS Marketplace es un catálogo digital curado que facilita encontrar, comprar, desplegar y gestionar software de terceros y servicios que necesitas para construir soluciones en AWS. Con AWS Marketplace, puedes:</p>
               <ul>
                   <li><strong>Amplia Gama de Productos:</strong> Accede a una amplia gama de productos de software en diversas categorías, incluyendo seguridad, redes, almacenamiento y análisis, todos verificados por AWS.</li>
@@ -622,10 +634,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que necesitas un software de seguridad para proteger tus aplicaciones en la nube. Con AWS Marketplace, puedes buscar y seleccionar una solución de seguridad adecuada, desplegarla rápidamente en tu entorno AWS y gestionar su uso y suscripción desde una única consola.</p>
             `,
-            imageUrl: marketplace,
-          },        
-          "AWS Batch": {
-            description: `
+          imageUrl: marketplace,
+        },
+        "AWS Batch": {
+          description: `
               <p>AWS Batch facilita la ejecución de trabajos por lotes a cualquier escala, permitiendo a los usuarios configurar y ejecutar miles de trabajos computacionales a través de máquinas virtuales o instancias de contenedor. AWS Batch gestiona automáticamente el aprovisionamiento de recursos y la ejecución de trabajos, optimizando el uso de los recursos y permitiéndote enfocarte en desarrollar y analizar tus aplicaciones en lugar de gestionar la infraestructura subyacente.</p>
               <p>Características clave incluyen:</p>
               <ul>
@@ -637,10 +649,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que gestionas un laboratorio de investigación que realiza simulaciones complejas para estudios climáticos. Con AWS Batch, puedes configurar trabajos que ejecuten estas simulaciones en miles de instancias simultáneamente, reduciendo significativamente el tiempo de procesamiento y obteniendo resultados más rápido.</p>
             `,
-            imageUrl: "",
-          },
-          "Amazon EC2": {
-            description: `
+          imageUrl: "",
+        },
+        "Amazon EC2": {
+          description: `
               <p>Amazon Elastic Compute Cloud (Amazon EC2) es un servicio web que proporciona capacidad informática redimensionable en la nube. EC2 permite a los usuarios obtener y configurar capacidad de computación de manera rápida y sencilla, proporcionando el control completo sobre los recursos informáticos y permitiendo ejecutar cargas de trabajo en el entorno de computación probado de AWS.</p>
               <p>Amazon EC2 ofrece una amplia variedad de tipos de instancias, cada una optimizada para diferentes casos de uso, incluyendo instancias de propósito general, optimizadas para cómputo, memoria, almacenamiento y aceleración gráfica. Los usuarios pueden seleccionar y configurar el tipo de instancia que mejor se adapte a sus necesidades y cambiar la configuración según sea necesario para ajustarse a los cambios en los requisitos de la carga de trabajo.</p>
               <p>Características clave de Amazon EC2:</p>
@@ -655,10 +667,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Supongamos que estás desarrollando una aplicación de análisis de big data que necesita procesar grandes volúmenes de datos en tiempo real. Con Amazon EC2, puedes desplegar instancias optimizadas para computación que manejen estas cargas de trabajo intensivas, escalando hacia arriba durante los picos de uso y hacia abajo cuando la demanda disminuya, optimizando costos y rendimiento.</p>
             `,
-            imageUrl: amazonec2,
-          },
-          "AWS Elastic Beanstalk": {
-            description: `
+          imageUrl: amazonec2,
+        },
+        "AWS Elastic Beanstalk": {
+          description: `
               <p>AWS Elastic Beanstalk facilita el despliegue y escalado de aplicaciones y servicios web desarrollados con lenguajes como Java, .NET, PHP, Node.js, Python, Ruby, Go y Docker en servidores familiares como Apache, Nginx, Passenger e IIS. Elastic Beanstalk automatiza la gestión de la infraestructura subyacente, incluyendo el aprovisionamiento de capacidad, balanceo de carga, escalado automático y monitoreo de salud de las aplicaciones.</p>
               <p>Con Elastic Beanstalk, puedes cargar fácilmente el código de tu aplicación y el servicio se encarga del resto, desde el aprovisionamiento de recursos hasta la configuración de entornos y la administración continua. Esto permite a los desarrolladores concentrarse en escribir código y dejar la gestión operativa a Elastic Beanstalk.</p>
               <p>Características clave incluyen:</p>
@@ -671,10 +683,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que desarrollas una aplicación web de comercio electrónico que necesita manejar grandes volúmenes de tráfico durante eventos promocionales. Con AWS Elastic Beanstalk, puedes desplegar rápidamente tu aplicación y confiar en que se escalará automáticamente para manejar picos de tráfico, sin preocuparte por la infraestructura subyacente.</p>
             `,
-            imageUrl: elasticbeanstalk,
-          },
-          "Amazon Lightsail": {
-            description: `
+          imageUrl: elasticbeanstalk,
+        },
+        "Amazon Lightsail": {
+          description: `
               <p>Amazon Lightsail es una forma fácil de comenzar con AWS, ofreciendo todo lo necesario para desplegar rápidamente un proyecto: una máquina virtual, almacenamiento basado en SSD, transferencia de datos, gestión de DNS y una dirección IP estática, todo por un bajo costo mensual. Lightsail está diseñado para ser simple y accesible, proporcionando una plataforma de computación sencilla para desarrolladores, pequeñas empresas y proyectos personales.</p>
               <p>Características clave incluyen:</p>
               <ul>
@@ -686,10 +698,10 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que tienes un blog personal y quieres migrarlo a la nube para mejorar su disponibilidad y rendimiento. Con Amazon Lightsail, puedes desplegar una instancia de máquina virtual preconfigurada con WordPress, gestionar fácilmente el DNS y asegurarte de que tu blog esté siempre accesible, todo a un costo asequible.</p>
             `,
-            imageUrl: "",
-          },
-          "AWS Outposts": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Outposts": {
+          description: `
               <p>AWS Outposts es un servicio que lleva la infraestructura y los servicios nativos de AWS a prácticamente cualquier centro de datos, espacio de colocación o instalación local. Outposts extiende los servicios de AWS a entornos locales, permitiendo a las organizaciones utilizar la misma infraestructura, APIs, herramientas y servicios que en la nube de AWS.</p>
               <p>Características clave incluyen:</p>
               <ul>
@@ -700,8 +712,8 @@ function Documentation() {
               <h4>Ejemplo Práctico:</h4>
               <p>Imagina que eres una empresa de salud que necesita mantener ciertos datos y aplicaciones en sus propias instalaciones por razones de cumplimiento y latencia. Con AWS Outposts, puedes ejecutar servicios de AWS como EC2 y RDS en tu centro de datos, integrándolos perfectamente con tus sistemas locales y aprovechando la misma infraestructura y herramientas que usas en la nube de AWS.</p>
             `,
-            imageUrl: "",
-          },
+          imageUrl: "",
+        },
         "Amazon ECR": {
           description: `
                 <p>Amazon Elastic Container Registry (Amazon ECR) es un servicio de registro de contenedores Docker completamente administrado que facilita el almacenamiento, la gestión y el despliegue de imágenes de contenedor Docker. ECR está diseñado para integrarse perfectamente con Amazon Elastic Container Service (ECS), Amazon Elastic Kubernetes Service (EKS) y AWS Lambda, proporcionando un flujo de trabajo de desarrollo de contenedores sencillo y eficiente.</p>
@@ -769,7 +781,7 @@ function Documentation() {
                 </ul>
                 <p>AWS Support es ideal para cualquier organización que utilice servicios de AWS y necesite soporte técnico confiable y asistencia personalizada para maximizar el valor de su inversión en la nube.</p>
             `,
-          imageUrl: "",
+          imageUrl: planes,
         },
         "Amazon Aurora": {
           description: `
@@ -1202,8 +1214,8 @@ function Documentation() {
     `,
           imageUrl: "",
         },
-          "AWS Auto Scaling": {
-            description: `
+        "AWS Auto Scaling": {
+          description: `
               <p>AWS Auto Scaling facilita configurar el escalado automático para sus recursos de AWS. Ajusta automáticamente la capacidad de computación para mantener un rendimiento estable y predecible al menor costo posible.</p>
               <p>Características clave de AWS Auto Scaling:</p>
               <ul>
@@ -1214,10 +1226,10 @@ function Documentation() {
               <p>Ideal para mantener el rendimiento y optimizar costos en entornos variables.</p>
               <p><strong>Caso práctico:</strong> Imagina que tienes una aplicación web con picos de tráfico durante ciertas horas del día. Con AWS Auto Scaling, puedes configurar políticas para agregar más instancias EC2 cuando el tráfico aumenta y reducirlas cuando el tráfico disminuye, garantizando así un rendimiento constante sin pagar por recursos ociosos.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS CloudFormation": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS CloudFormation": {
+          description: `
               <p>AWS CloudFormation facilita modelar y configurar sus recursos de AWS utilizando plantillas, reduciendo el tiempo de gestión de la infraestructura.</p>
               <p>Características clave de AWS CloudFormation:</p>
               <ul>
@@ -1228,10 +1240,10 @@ function Documentation() {
               <p>Ideal para gestionar infraestructuras complejas de manera eficiente y coherente.</p>
               <p><strong>Caso práctico:</strong> Supongamos que tienes una aplicación que necesita un conjunto específico de recursos AWS (EC2, RDS, S3, etc.). Con AWS CloudFormation, puedes definir estos recursos en una plantilla y desplegar la infraestructura completa con un solo comando, asegurando consistencia y reduciendo errores manuales.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS CloudTrail": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS CloudTrail": {
+          description: `
               <p>AWS CloudTrail facilita la gobernanza, el cumplimiento y la auditoría operativa de su cuenta de AWS, registrando todas las acciones realizadas en su cuenta.</p>
               <p>Características clave de AWS CloudTrail:</p>
               <ul>
@@ -1243,10 +1255,10 @@ function Documentation() {
               <p><strong>Auditoría:</strong> La auditoría se refiere a la revisión y análisis de los registros de actividad para asegurarse de que se están siguiendo las políticas y procedimientos adecuados.</p>
               <p><strong>Caso práctico:</strong> Si necesitas investigar un acceso no autorizado a tu infraestructura, puedes usar AWS CloudTrail para revisar los registros de actividad y determinar quién accedió a qué recurso y cuándo, ayudando en la auditoría y resolución de incidentes de seguridad.</p>
             `,
-            imageUrl: ""
-          },
-          "Amazon CloudWatch": {
-            description: `
+          imageUrl: "",
+        },
+        "Amazon CloudWatch": {
+          description: `
               <p>Amazon CloudWatch facilita monitorear y gestionar aplicaciones y servicios en AWS, proporcionando datos y conocimientos procesables.</p>
               <p>Características clave de Amazon CloudWatch:</p>
               <ul>
@@ -1258,10 +1270,10 @@ function Documentation() {
               <p><strong>Monitoreo:</strong> El monitoreo implica observar continuamente el rendimiento de los recursos y aplicaciones para identificar y responder a posibles problemas.</p>
               <p><strong>Caso práctico:</strong> Si tu aplicación web experimenta una disminución en el rendimiento, puedes usar Amazon CloudWatch para monitorear las métricas de CPU y memoria de tus instancias EC2, crear alarmas para ser notificado si se alcanzan ciertos umbrales, y tomar acciones automatizadas como reiniciar instancias o escalar horizontalmente.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Compute Optimizer": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Compute Optimizer": {
+          description: `
               <p>AWS Compute Optimizer facilita recomendar recursos de cómputo óptimos para mejorar el rendimiento y reducir costos.</p>
               <p>Características clave de AWS Compute Optimizer:</p>
               <ul>
@@ -1273,10 +1285,10 @@ function Documentation() {
               <p><strong>Optimización:</strong> La optimización se refiere a ajustar los recursos y configuraciones para obtener el mejor rendimiento posible al menor costo.</p>
               <p><strong>Caso práctico:</strong> Si tienes una instancia EC2 que está subutilizada, AWS Compute Optimizer puede recomendarte cambiar a un tipo de instancia más pequeño para reducir costos, o si una instancia está sobrecargada, recomendar un tipo más grande para mejorar el rendimiento.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Config": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Config": {
+          description: `
               <p>AWS Config facilita evaluar, auditar y evaluar las configuraciones de sus recursos de AWS, proporcionando un inventario detallado y un historial de configuraciones.</p>
               <p>Características clave de AWS Config:</p>
               <ul>
@@ -1288,10 +1300,10 @@ function Documentation() {
               <p><strong>Auditoría:</strong> La auditoría implica revisar y analizar las configuraciones y actividades para asegurarse de que cumplen con las políticas y estándares establecidos.</p>
               <p><strong>Caso práctico:</strong> Si necesitas asegurarte de que todas tus instancias EC2 cumplen con ciertos requisitos de seguridad (como estar dentro de un grupo de seguridad específico), puedes usar AWS Config para monitorear estas configuraciones y recibir alertas si alguna instancia no cumple con las reglas establecidas.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Control Tower": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Control Tower": {
+          description: `
               <p>AWS Control Tower facilita configurar y gobernar un entorno de múltiples cuentas de AWS seguro y bien arquitectado, proporcionando un entorno preconfigurado y automatizado.</p>
               <p>Características clave de AWS Control Tower:</p>
               <ul>
@@ -1303,10 +1315,10 @@ function Documentation() {
               <p><strong>Guardrails:</strong> Los guardrails son políticas preconfiguradas que ayudan a asegurar que las cuentas y recursos sigan las mejores prácticas y estándares de seguridad.</p>
               <p><strong>Caso práctico:</strong> Una gran empresa que maneja múltiples cuentas de AWS para diferentes departamentos puede usar AWS Control Tower para configurar políticas de seguridad y conformidad a nivel de toda la organización, asegurando que todas las cuentas sigan las mejores prácticas sin la necesidad de configurarlas manualmente una por una.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Health Dashboard": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Health Dashboard": {
+          description: `
               <p>AWS Health Dashboard proporciona visibilidad a eventos y recomendaciones de AWS para ayudar a gestionar su salud operativa, ofreciendo una vista centralizada de la salud de sus servicios de AWS.</p>
               <p>Características clave de AWS Health Dashboard:</p>
               <ul>
@@ -1317,10 +1329,10 @@ function Documentation() {
               <p>Esencial para mantener la visibilidad y la salud de sus servicios de AWS.</p>
               <p><strong>Caso práctico:</strong> Si un servicio de AWS que estás utilizando tiene una interrupción, AWS Health Dashboard te notificará del problema y proporcionará actualizaciones en tiempo real sobre el estado del servicio y recomendaciones sobre cómo mitigar el impacto en tus aplicaciones.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Management Console": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Management Console": {
+          description: `
               <p>AWS Management Console facilita gestionar sus recursos de AWS con una interfaz web sencilla y gráfica, proporcionando una vista centralizada de todos sus servicios de AWS.</p>
               <p>Características clave de AWS Management Console:</p>
               <ul>
@@ -1332,10 +1344,10 @@ function Documentation() {
               <p><strong>Interfaz gráfica:</strong> Una interfaz gráfica es una forma visual de interactuar con los servicios y recursos, usando botones, menús y ventanas en lugar de comandos de texto.</p>
               <p><strong>Caso práctico:</strong> Si eres un administrador que prefiere no usar la línea de comandos, puedes utilizar la AWS Management Console para lanzar instancias EC2, configurar servicios de S3 y monitorear tus recursos de manera visual e intuitiva.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Organizations": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Organizations": {
+          description: `
               <p>AWS Organizations facilita gestionar y gobernar sus entornos de AWS a medida que su negocio escala y crece, permitiendo consolidar varias cuentas de AWS en una organización.</p>
               <p>Características clave de AWS Organizations:</p>
               <ul>
@@ -1347,10 +1359,10 @@ function Documentation() {
               <p><strong>Consolidación de facturación:</strong> La consolidación de facturación permite agrupar los costos de todas las cuentas de AWS en una sola factura, simplificando la gestión de pagos y aprovechando descuentos por volumen.</p>
               <p><strong>Caso práctico:</strong> Una empresa con diferentes departamentos que usan sus propias cuentas de AWS puede usar AWS Organizations para aplicar políticas de seguridad a todas las cuentas, monitorear el uso y consolidar los costos en una sola factura, facilitando la gestión financiera y de cumplimiento.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Service Catalog": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Service Catalog": {
+          description: `
               <p>AWS Service Catalog facilita crear y gestionar catálogos de servicios de TI aprobados en AWS, permitiendo a las organizaciones estandarizar las ofertas de servicios de TI.</p>
               <p>Características clave de AWS Service Catalog:</p>
               <ul>
@@ -1362,10 +1374,10 @@ function Documentation() {
               <p><strong>Catálogo de servicios:</strong> Un catálogo de servicios es una colección organizada de recursos y servicios aprobados que los usuarios pueden desplegar y utilizar, asegurando que se sigan las políticas y estándares de la organización.</p>
               <p><strong>Caso práctico:</strong> Una empresa de TI puede crear un catálogo de servicios con configuraciones aprobadas de instancias EC2, bases de datos y redes, permitiendo a los empleados desplegar estos recursos de manera rápida y conforme a las políticas de la empresa.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Systems Manager": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Systems Manager": {
+          description: `
               <p>AWS Systems Manager facilita ver y controlar su infraestructura de AWS a medida que crece, proporcionando una interfaz unificada para gestionar recursos y automatizar tareas operativas.</p>
               <p>Características clave de AWS Systems Manager:</p>
               <ul>
@@ -1377,10 +1389,10 @@ function Documentation() {
               <p><strong>Automatización:</strong> La automatización implica usar herramientas y scripts para realizar tareas repetitivas sin intervención manual, ahorrando tiempo y reduciendo errores.</p>
               <p><strong>Caso práctico:</strong> Si necesitas aplicar parches de seguridad a cientos de instancias EC2, puedes usar AWS Systems Manager para automatizar este proceso, asegurando que todas las instancias estén actualizadas sin tener que hacerlo manualmente una por una.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Trusted Advisor": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Trusted Advisor": {
+          description: `
               <p>AWS Trusted Advisor facilita optimizar su infraestructura de AWS, mejorar la seguridad y el rendimiento, y reducir costos, proporcionando recomendaciones personalizadas basadas en las mejores prácticas de AWS.</p>
               <p>Características clave de AWS Trusted Advisor:</p>
               <ul>
@@ -1392,10 +1404,10 @@ function Documentation() {
               <p><strong>Recomendaciones personalizadas:</strong> Las recomendaciones personalizadas son sugerencias específicas basadas en la configuración y uso actual de tus recursos, ayudándote a mejorar y optimizar tu infraestructura.</p>
               <p><strong>Caso práctico:</strong> AWS Trusted Advisor puede recomendar eliminar instancias EC2 no utilizadas para reducir costos, habilitar Multi-Factor Authentication (MFA) para mejorar la seguridad, y ajustar configuraciones para mejorar el rendimiento de las aplicaciones.</p>
             `,
-            imageUrl: ""
-          },
-          "AWS Well-Architected Tool": {
-            description: `
+          imageUrl: "",
+        },
+        "AWS Well-Architected Tool": {
+          description: `
               <p>AWS Well-Architected Tool facilita revisar el estado de sus cargas de trabajo y comparar las mejores prácticas arquitectónicas de AWS, proporcionando una evaluación detallada y recomendaciones para mejorar la arquitectura de sus aplicaciones.</p>
               <p>Características clave de AWS Well-Architected Tool:</p>
               <ul>
@@ -1407,8 +1419,8 @@ function Documentation() {
               <p><strong>Well-Architected Framework:</strong> El Well-Architected Framework es un conjunto de mejores prácticas de AWS dividido en cinco pilares: Excelencia Operacional, Seguridad, Fiabilidad, Eficiencia de Rendimiento y Optimización de Costos.</p>
               <p><strong>Caso práctico:</strong> Si estás desarrollando una nueva aplicación, puedes usar la AWS Well-Architected Tool para evaluar tu arquitectura actual, recibir recomendaciones sobre cómo mejorarla y asegurarte de que cumple con las mejores prácticas de AWS en términos de seguridad, eficiencia y costos.</p>
             `,
-            imageUrl: ""
-          },        
+          imageUrl: "",
+        },
         "AWS Database Migration Service (AWS DMS)": {
           description: `
         <p>AWS Database Migration Service facilita migrar bases de datos a AWS de manera rápida y segura. DMS soporta migraciones homogéneas (por ejemplo, Oracle a Oracle) y heterogéneas (por ejemplo, Oracle a Aurora), permitiendo a las organizaciones mover sus bases de datos a la nube con mínima interrupción.</p>
@@ -1487,94 +1499,102 @@ function Documentation() {
         },
         "Amazon API Gateway": {
           description: `
-        <p>Amazon API Gateway facilita crear, publicar, mantener, monitorear y asegurar API a cualquier escala. Proporciona una plataforma completamente gestionada para construir, desplegar y gestionar API REST y WebSocket, permitiendo a los desarrolladores crear aplicaciones escalables y seguras.</p>
-        <p>Características clave de Amazon API Gateway:</p>
-        <ul>
-            <li>Creación y despliegue de API REST y WebSocket.</li>
-            <li>Monitoreo y análisis de tráfico de API.</li>
-            <li>Integración con servicios de backend como AWS Lambda, Amazon EC2 y más.</li>
-        </ul>
-        <p>Amazon API Gateway es ideal para desarrolladores que necesitan crear y gestionar API escalables y seguras.</p>
-    `,
-          imageUrl: "",
+            <p>Amazon API Gateway facilita crear, publicar, mantener, monitorear y asegurar API a cualquier escala. Proporciona una plataforma completamente gestionada para construir, desplegar y gestionar API REST y WebSocket, permitiendo a los desarrolladores crear aplicaciones escalables y seguras.</p>
+            <p>Características clave de Amazon API Gateway:</p>
+            <ul>
+                <li>Creación y despliegue de API REST y WebSocket.</li>
+                <li>Monitoreo y análisis de tráfico de API.</li>
+                <li>Integración con servicios de backend como AWS Lambda, Amazon EC2 y más.</li>
+            </ul>
+            <p>Amazon API Gateway es ideal para desarrolladores que necesitan crear y gestionar API escalables y seguras.</p>
+          `,
+          imageUrl: apigateway,
         },
         "Amazon CloudFront": {
           description: `
-        <p>Amazon CloudFront es una red de entrega de contenido (CDN) que facilita entregar datos, videos, aplicaciones y API a sus usuarios globalmente con baja latencia y altas velocidades de transferencia. CloudFront se integra con otros servicios de AWS para proporcionar una experiencia de entrega de contenido segura y optimizada.</p>
-        <p>Características clave de Amazon CloudFront:</p>
-        <ul>
-            <li>Entrega global de contenido con baja latencia.</li>
-            <li>Integración con Amazon S3, AWS Lambda y otros servicios de AWS.</li>
-            <li>Seguridad mejorada con AWS Shield, AWS WAF y certificados SSL/TLS.</li>
-        </ul>
-        <p>Amazon CloudFront es ideal para organizaciones que necesitan una entrega rápida y segura de contenido a usuarios globales.</p>
-    `,
-          imageUrl: "",
+            <p>Amazon CloudFront es una red de entrega de contenido (CDN) que facilita entregar datos, videos, aplicaciones y API a sus usuarios globalmente con baja latencia y altas velocidades de transferencia. CloudFront se integra con otros servicios de AWS para proporcionar una experiencia de entrega de contenido segura y optimizada.</p>
+            <p>Características clave de Amazon CloudFront:</p>
+            <ul>
+                <li>Entrega global de contenido con baja latencia.</li>
+                <li>Integración con Amazon S3, AWS Lambda y otros servicios de AWS.</li>
+                <li>Seguridad mejorada con AWS Shield, AWS WAF y certificados SSL/TLS.</li>
+            </ul>
+            <p>Amazon CloudFront es ideal para organizaciones que necesitan una entrega rápida y segura de contenido a usuarios globales.</p>
+            <p><strong>¿Qué es la entrega de contenido?</strong> La entrega de contenido se refiere a la distribución de contenido digital, como datos, videos, aplicaciones y API, a usuarios finales a través de una red de servidores distribuidos geográficamente para asegurar baja latencia y alta velocidad.</p>
+            <p><strong>Diferencias con AWS Global Accelerator:</strong> Mientras que CloudFront se centra en la entrega rápida de contenido estático y dinámico, AWS Global Accelerator mejora la disponibilidad y el rendimiento de sus aplicaciones al dirigir el tráfico de usuario a los puntos de presencia de AWS más cercanos.</p>
+            <p><strong>Ejemplo práctico:</strong> Una empresa de medios puede usar Amazon CloudFront para entregar videos a sus usuarios en todo el mundo, asegurando una experiencia de visualización rápida y sin interrupciones.</p>
+          `,
+          imageUrl: cloudfront,
         },
         "AWS Direct Connect": {
           description: `
-        <p>AWS Direct Connect facilita establecer una conexión de red dedicada desde sus instalaciones a AWS. Proporciona una conexión de red privada de alta velocidad que puede mejorar el rendimiento de las aplicaciones y reducir los costos de transferencia de datos.</p>
-        <p>Características clave de AWS Direct Connect:</p>
-        <ul>
-            <li>Conexión de red dedicada y privada a AWS.</li>
-            <li>Mejora del rendimiento de aplicaciones y reducción de latencia.</li>
-            <li>Reducción de costos de transferencia de datos.</li>
-        </ul>
-        <p>AWS Direct Connect es ideal para organizaciones que necesitan una conexión de red fiable y de alta velocidad a AWS.</p>
-    `,
-          imageUrl: "",
+            <p>AWS Direct Connect facilita establecer una conexión de red dedicada desde sus instalaciones a AWS. Proporciona una conexión de red privada de alta velocidad que puede mejorar el rendimiento de las aplicaciones y reducir los costos de transferencia de datos.</p>
+            <p>Características clave de AWS Direct Connect:</p>
+            <ul>
+                <li>Conexión de red dedicada y privada a AWS.</li>
+                <li>Mejora del rendimiento de aplicaciones y reducción de latencia.</li>
+                <li>Reducción de costos de transferencia de datos.</li>
+            </ul>
+            <p>AWS Direct Connect es ideal para organizaciones que necesitan una conexión de red fiable y de alta velocidad a AWS.</p>
+            <p><strong>Ejemplo práctico:</strong> Una empresa financiera puede utilizar AWS Direct Connect para transferir grandes volúmenes de datos de manera segura y eficiente entre sus centros de datos y AWS, mejorando el rendimiento y reduciendo los costos de transferencia.</p>
+          `,
+          imageUrl: directconnect,
         },
         "AWS Global Accelerator": {
           description: `
-        <p>AWS Global Accelerator facilita mejorar la disponibilidad y el rendimiento de sus aplicaciones globales mediante rutas optimizadas y controladas por la red global de AWS. Global Accelerator dirige el tráfico de usuario a los puntos de presencia de AWS más cercanos, optimizando la entrega de contenido y aplicaciones.</p>
-        <p>Características clave de AWS Global Accelerator:</p>
-        <ul>
-            <li>Mejora del rendimiento de aplicaciones globales.</li>
-            <li>Rutas optimizadas para la entrega de contenido.</li>
-            <li>Mayor disponibilidad y fiabilidad de aplicaciones.</li>
-        </ul>
-        <p>AWS Global Accelerator es ideal para organizaciones que necesitan mejorar la experiencia de usuario y la disponibilidad de sus aplicaciones a nivel global.</p>
-    `,
-          imageUrl: "",
+            <p>AWS Global Accelerator facilita mejorar la disponibilidad y el rendimiento de sus aplicaciones globales mediante rutas optimizadas y controladas por la red global de AWS. Global Accelerator dirige el tráfico de usuario a los puntos de presencia de AWS más cercanos, optimizando la entrega de contenido y aplicaciones.</p>
+            <p>Características clave de AWS Global Accelerator:</p>
+            <ul>
+                <li>Mejora del rendimiento de aplicaciones globales.</li>
+                <li>Rutas optimizadas para la entrega de contenido.</li>
+                <li>Mayor disponibilidad y fiabilidad de aplicaciones.</li>
+            </ul>
+            <p>AWS Global Accelerator es ideal para organizaciones que necesitan mejorar la experiencia de usuario y la disponibilidad de sus aplicaciones a nivel global.</p>
+            <p><strong>Ejemplo práctico:</strong> Una aplicación de juegos en línea puede usar AWS Global Accelerator para mejorar la latencia y la experiencia de juego de usuarios en todo el mundo, dirigiendo el tráfico a los puntos de presencia más cercanos.</p>
+          `,
+          imageUrl: globalaccelerator,
         },
         "Amazon Route 53": {
           description: `
-        <p>Amazon Route 53 facilita gestionar tráfico de DNS para sus dominios, proporcionando alta disponibilidad y escalabilidad. Route 53 puede utilizarse para registrar dominios, enrutar tráfico de usuarios a aplicaciones y monitorizar la salud de los recursos.</p>
-        <p>Características clave de Amazon Route 53:</p>
-        <ul>
-            <li>Registro de dominios y gestión de DNS.</li>
-            <li>Enrutamiento de tráfico con baja latencia y alta disponibilidad.</li>
-            <li>Monitoreo y conmutación por error de recursos.</li>
-        </ul>
-        <p>Amazon Route 53 es ideal para organizaciones que necesitan una solución fiable y escalable para gestionar el tráfico de DNS.</p>
-    `,
-          imageUrl: "",
+            <p>Amazon Route 53 facilita gestionar tráfico de DNS para sus dominios, proporcionando alta disponibilidad y escalabilidad. Route 53 puede utilizarse para registrar dominios, enrutar tráfico de usuarios a aplicaciones y monitorizar la salud de los recursos.</p>
+            <p>Características clave de Amazon Route 53:</p>
+            <ul>
+                <li>Registro de dominios y gestión de DNS.</li>
+                <li>Enrutamiento de tráfico con baja latencia y alta disponibilidad.</li>
+                <li>Monitoreo y conmutación por error de recursos.</li>
+            </ul>
+            <p>Amazon Route 53 es ideal para organizaciones que necesitan una solución fiable y escalable para gestionar el tráfico de DNS.</p>
+            <p><strong>Ejemplo práctico:</strong> Una empresa de comercio electrónico puede usar Amazon Route 53 para gestionar el tráfico DNS y asegurar que sus usuarios sean dirigidos a los servidores más cercanos y de mayor rendimiento.</p>
+          `,
+          imageUrl: route53,
         },
         "Amazon VPC": {
           description: `
-        <p>Amazon Virtual Private Cloud (Amazon VPC) facilita lanzar recursos de AWS en una red virtual que usted define. VPC proporciona un entorno de red aislado y seguro donde puede desplegar recursos de AWS, como instancias de EC2, bases de datos y más.</p>
-        <p>Características clave de Amazon VPC:</p>
-        <ul>
-            <li>Control total sobre el entorno de red virtual.</li>
-            <li>Subredes públicas y privadas, tablas de enrutamiento y gateways de red.</li>
-            <li>Integración con servicios de seguridad de AWS, como AWS WAF y AWS Shield.</li>
-        </ul>
-        <p>Amazon VPC es ideal para organizaciones que necesitan un entorno de red seguro y aislado para sus recursos de AWS.</p>
-    `,
-          imageUrl: "",
+            <p>Amazon Virtual Private Cloud (Amazon VPC) facilita lanzar recursos de AWS en una red virtual que usted define. VPC proporciona un entorno de red aislado y seguro donde puede desplegar recursos de AWS, como instancias de EC2, bases de datos y más.</p>
+            <p>Características clave de Amazon VPC:</p>
+            <ul>
+                <li>Control total sobre el entorno de red virtual.</li>
+                <li>Subredes públicas y privadas, tablas de enrutamiento y gateways de red.</li>
+                <li>Integración con servicios de seguridad de AWS, como AWS WAF y AWS Shield.</li>
+            </ul>
+            <p>Amazon VPC es ideal para organizaciones que necesitan un entorno de red seguro y aislado para sus recursos de AWS.</p>
+            <p><strong>Ejemplo práctico:</strong> Una empresa puede usar Amazon VPC para desplegar una aplicación web en un entorno aislado y seguro, asegurando que el tráfico no autorizado no pueda acceder a sus recursos.</p>
+          `,
+          imageUrl: amazonvpc,
         },
         "AWS VPN": {
           description: `
-        <p>AWS VPN facilita establecer conexiones de red seguras y cifradas entre sus redes locales o sucursales y la infraestructura global de AWS. Proporciona dos tipos de VPN: AWS Site-to-Site VPN y AWS Client VPN.</p>
-        <p>Características clave de AWS VPN:</p>
-        <ul>
-            <li>Conexiones de red seguras y cifradas.</li>
-            <li>Compatibilidad con múltiples dispositivos y configuraciones VPN.</li>
-            <li>Integración con Amazon VPC para conexiones de red privadas.</li>
-        </ul>
-        <p>AWS VPN es ideal para organizaciones que necesitan establecer conexiones de red seguras y cifradas con AWS.</p>
-    `,
-          imageUrl: "",
+            <p>AWS VPN facilita establecer conexiones de red seguras y cifradas entre sus redes locales o sucursales y la infraestructura global de AWS. Proporciona dos tipos de VPN: AWS Site-to-Site VPN y AWS Client VPN.</p>
+            <p>Características clave de AWS VPN:</p>
+            <ul>
+                <li>Conexiones de red seguras y cifradas.</li>
+                <li>Compatibilidad con múltiples dispositivos y configuraciones VPN.</li>
+                <li>Integración con Amazon VPC para conexiones de red privadas.</li>
+            </ul>
+            <p>AWS VPN es ideal para organizaciones que necesitan establecer conexiones de red seguras y cifradas con AWS.</p>
+            <p><strong>Ejemplo práctico:</strong> Una empresa con múltiples sucursales puede usar AWS Site-to-Site VPN para conectar sus oficinas a su infraestructura en AWS de manera segura y cifrada.</p>
+          `,
+          imageUrl: awsvpn,
         },
         "AWS Artifact": {
           description: `
@@ -1587,7 +1607,7 @@ function Documentation() {
         </ul>
         <p>AWS Artifact es ideal para organizaciones que necesitan acceder a informes de cumplimiento y seguridad de AWS para cumplir con regulaciones y auditorías.</p>
     `,
-          imageUrl: "",
+          imageUrl: artifact,
         },
         "AWS Certificate Manager (ACM)": {
           description: `
@@ -1600,7 +1620,7 @@ function Documentation() {
         </ul>
         <p>AWS Certificate Manager es ideal para organizaciones que necesitan gestionar certificados SSL/TLS de manera sencilla y segura.</p>
     `,
-          imageUrl: "",
+          imageUrl: acm,
         },
         "AWS CloudHSM": {
           description: `
@@ -1613,20 +1633,24 @@ function Documentation() {
         </ul>
         <p>AWS CloudHSM es ideal para organizaciones que necesitan una solución segura y conforme para gestionar y usar claves criptográficas.</p>
     `,
-          imageUrl: "",
+          imageUrl: hsm,
         },
         "Amazon Cognito": {
           description: `
-        <p>Amazon Cognito facilita agregar registro de usuario, inicio de sesión y control de acceso a sus aplicaciones web y móviles. Proporciona autenticación, autorización y sincronización de datos para millones de usuarios.</p>
-        <p>Características clave de Amazon Cognito:</p>
-        <ul>
-            <li>Gestión de usuarios y autenticación.</li>
-            <li>Soporte para federación de identidades con proveedores de identidad social.</li>
-            <li>Sincronización de datos en tiempo real entre dispositivos.</li>
-        </ul>
-        <p>Amazon Cognito es ideal para desarrolladores que necesitan una solución escalable y segura para gestionar usuarios y autenticar aplicaciones.</p>
-    `,
-          imageUrl: "",
+            <p>Amazon Cognito facilita agregar registro de usuario, inicio de sesión y control de acceso a sus aplicaciones web y móviles. Proporciona autenticación, autorización y sincronización de datos para millones de usuarios.</p>
+            <p>Características clave de Amazon Cognito:</p>
+            <ul>
+                <li>Gestión de usuarios y autenticación.</li>
+                <li>Soporte para federación de identidades con proveedores de identidad social.</li>
+                <li>Sincronización de datos en tiempo real entre dispositivos.</li>
+                <li>Componentes principales: User Pools y Identity Pools.</li>
+            </ul>
+            <p><strong>User Pools:</strong> Son directorios de usuarios que proporcionan opciones de registro e inicio de sesión para las aplicaciones. Ofrecen capacidades avanzadas de gestión de usuarios, incluyendo autenticación multifactor y federación de identidades.</p>
+            <p><strong>Identity Pools:</strong> Permiten a los usuarios obtener acceso temporal a recursos de AWS. Los usuarios autenticados e invitados pueden acceder a servicios como S3 y DynamoDB.</p>
+            <p>Amazon Cognito es ideal para desarrolladores que necesitan una solución escalable y segura para gestionar usuarios y autenticar aplicaciones.</p>
+            <p><strong>Ejemplo práctico:</strong> Una aplicación móvil que requiere inicio de sesión de usuario y acceso a datos sincronizados en tiempo real puede usar Amazon Cognito para gestionar la autenticación y autorización de usuarios, asegurando una experiencia de usuario segura y eficiente.</p>
+          `,
+          imageUrl: cognito,
         },
         "AWS Directory Service": {
           description: `
@@ -1665,20 +1689,32 @@ function Documentation() {
         </ul>
         <p>Amazon GuardDuty es ideal para organizaciones que necesitan una solución de detección de amenazas efectiva y automatizada para su infraestructura de AWS.</p>
     `,
-          imageUrl: "",
+          imageUrl: duty,
         },
         "AWS IAM": {
           description: `
-        <p>AWS Identity and Access Management (IAM) facilita gestionar el acceso a los servicios y recursos de AWS de forma segura. Proporciona control granular sobre permisos y políticas de acceso para usuarios y roles.</p>
-        <p>Características clave de AWS IAM:</p>
-        <ul>
-            <li>Gestión de usuarios, grupos y roles.</li>
-            <li>Control de acceso basado en políticas detalladas.</li>
-            <li>Autenticación multifactor (MFA) para mayor seguridad.</li>
-        </ul>
-        <p>AWS IAM es esencial para cualquier organización que utilice AWS y necesite gestionar el acceso de manera segura y eficiente.</p>
-    `,
-          imageUrl: "",
+    <p>AWS Identity and Access Management (IAM) facilita gestionar el acceso a los servicios y recursos de AWS de forma segura. Proporciona control granular sobre permisos y políticas de acceso para usuarios y roles.</p>
+    <p>Características clave de AWS IAM:</p>
+    <ul>
+        <li>Gestión de usuarios, grupos y roles.</li>
+        <li>Control de acceso basado en políticas detalladas.</li>
+        <li>Autenticación multifactor (MFA) para mayor seguridad.</li>
+        <li>Permisos granulares que permiten otorgar el acceso mínimo necesario.</li>
+        <li>Políticas gestionadas por AWS y políticas personalizadas.</li>
+        <li>Integración con otros servicios de AWS para una gestión centralizada de acceso.</li>
+        <li>Roles de IAM para delegar permisos a servicios de AWS.</li>
+    </ul>
+    <p>Principales componentes de AWS IAM:</p>
+    <ul>
+        <li><strong>Usuarios:</strong> Representan una entidad individual con permisos específicos para interactuar con los recursos de AWS.</li>
+        <li><strong>Grupos:</strong> Colección de usuarios que comparten permisos comunes, facilitando la gestión de permisos.</li>
+        <li><strong>Roles:</strong> Entidades con permisos que se pueden asumir temporalmente para realizar tareas específicas, especialmente útil para servicios y aplicaciones.</li>
+        <li><strong>Políticas:</strong> Documentos JSON que definen permisos, especificando qué acciones están permitidas o denegadas.</li>
+    </ul>
+    <p>AWS IAM es esencial para cualquier organización que utilice AWS y necesite gestionar el acceso de manera segura y eficiente.</p>
+    <p><strong>Ejemplo práctico:</strong> Una empresa puede usar AWS IAM para definir políticas de acceso detalladas que aseguren que solo los empleados autorizados puedan acceder a recursos críticos, aplicando MFA para un nivel adicional de seguridad.</p>
+  `,
+          imageUrl: iam,
         },
         "AWS IAM Identity Center (AWS Single Sign-On)": {
           description: `
@@ -1704,47 +1740,63 @@ function Documentation() {
         </ul>
         <p>Amazon Inspector es ideal para organizaciones que necesitan evaluar y mejorar la seguridad de sus instancias de EC2.</p>
     `,
-          imageUrl: "",
+          imageUrl: inspector,
         },
         "AWS Key Management Service (AWS KMS)": {
           description: `
-        <p>AWS Key Management Service facilita crear y gestionar claves criptográficas para proteger sus datos. Proporciona un control granular sobre el uso de claves y la capacidad de integrarse con otros servicios de AWS para cifrar datos.</p>
-        <p>Características clave de AWS KMS:</p>
-        <ul>
-            <li>Generación y gestión de claves criptográficas.</li>
-            <li>Control granular sobre el uso de claves.</li>
-            <li>Integración con servicios de AWS para cifrar datos en reposo y en tránsito.</li>
-        </ul>
-        <p>AWS KMS es esencial para organizaciones que necesitan una solución segura y gestionada para proteger sus datos con cifrado.</p>
-    `,
-          imageUrl: "",
+    <p>AWS Key Management Service (KMS) facilita la creación y gestión de claves criptográficas para proteger sus datos. Proporciona un control granular sobre el uso de claves y la capacidad de integrarse con otros servicios de AWS para cifrar datos en reposo y en tránsito.</p>
+    <p>Características clave de AWS KMS:</p>
+    <ul>
+        <li><strong>Generación y gestión de claves criptográficas:</strong> Permite crear, rotar, deshabilitar y eliminar claves de cifrado simétrico y asimétrico.</li>
+        <li><strong>Control granular sobre el uso de claves:</strong> Define políticas detalladas para el uso de claves, especificando quién puede usar cada clave y en qué condiciones.</li>
+        <li><strong>Integración con servicios de AWS:</strong> Se integra de manera nativa con muchos servicios de AWS como S3, EBS, RDS, Lambda, y más, permitiendo cifrar datos fácilmente.</li>
+        <li><strong>Auditoría y cumplimiento:</strong> Registra el uso de claves y genera registros detallados en AWS CloudTrail para facilitar auditorías y cumplir con requisitos de conformidad.</li>
+        <li><strong>Administración centralizada:</strong> Consolida la gestión de claves criptográficas en una única plataforma, facilitando el control y la supervisión.</li>
+    </ul>
+    <p>Principales componentes de AWS KMS:</p>
+    <ul>
+        <li><strong>Customer Master Keys (CMKs):</strong> Claves maestras administradas por el cliente utilizadas para cifrar y descifrar datos. Pueden ser administradas por AWS o por el cliente.</li>
+        <li><strong>Data Keys:</strong> Claves de datos generadas por CMKs para cifrar grandes volúmenes de datos, mejorando el rendimiento y la seguridad.</li>
+        <li><strong>Key Policies:</strong> Políticas asociadas a CMKs que definen permisos granulares sobre quién puede usar y gestionar cada clave.</li>
+    </ul>
+    <p>AWS KMS es esencial para organizaciones que necesitan una solución segura y gestionada para proteger sus datos con cifrado. Ofrece control detallado y auditoría del uso de claves, ayudando a cumplir con los requisitos de seguridad y conformidad.</p>
+    <p><strong>Ejemplo práctico:</strong> Una empresa que almacena datos sensibles en Amazon S3 puede usar AWS KMS para cifrar automáticamente todos los objetos almacenados. Además, puede definir políticas que permitan solo a ciertos usuarios y roles acceder a las claves de cifrado, y registrar todas las operaciones de clave para fines de auditoría y cumplimiento.</p>
+  `,
+          imageUrl: kms,
         },
         "Amazon Macie": {
           description: `
-        <p>Amazon Macie facilita descubrir, clasificar y proteger datos sensibles almacenados en Amazon S3. Utiliza machine learning para identificar y proteger datos personales y confidenciales.</p>
-        <p>Características clave de Amazon Macie:</p>
-        <ul>
-            <li>Descubrimiento y clasificación de datos sensibles.</li>
-            <li>Protección de datos personales y confidenciales.</li>
-            <li>Informes detallados y alertas de seguridad.</li>
-        </ul>
-        <p>Amazon Macie es ideal para organizaciones que necesitan proteger datos sensibles y cumplir con regulaciones de privacidad y seguridad.</p>
-    `,
-          imageUrl: "",
+    <p>Amazon Macie facilita descubrir, clasificar y proteger datos sensibles almacenados en Amazon S3. Utiliza machine learning para identificar y proteger datos personales y confidenciales.</p>
+    <p>Características clave de Amazon Macie:</p>
+    <ul>
+        <li>Descubrimiento y clasificación de datos sensibles automáticamente.</li>
+        <li>Protección de datos personales y confidenciales con machine learning.</li>
+        <li>Informes detallados y alertas de seguridad para actividades sospechosas.</li>
+        <li>Integración con AWS CloudTrail para auditoría y cumplimiento.</li>
+        <li>Capacidad para definir políticas de seguridad y cumplimiento personalizadas.</li>
+    </ul>
+    <p>Amazon Macie es ideal para organizaciones que necesitan proteger datos sensibles y cumplir con regulaciones de privacidad y seguridad.</p>
+    <p><strong>Ejemplo práctico:</strong> Una empresa que almacena datos de clientes en S3 puede utilizar Amazon Macie para identificar y proteger automáticamente información personal identificable (PII), cumpliendo con regulaciones como GDPR y HIPAA.</p>
+  `,
+          imageUrl: macie,
         },
         "AWS Network Firewall": {
           description: `
-        <p>AWS Network Firewall facilita desplegar y gestionar un firewall de red esencial para proteger su infraestructura de AWS. Proporciona una solución gestionada para inspección de tráfico, filtrado y prevención de amenazas.</p>
-        <p>Características clave de AWS Network Firewall:</p>
-        <ul>
-            <li>Inspección y filtrado de tráfico de red.</li>
-            <li>Prevención de amenazas y protección contra ataques.</li>
-            <li>Gestión centralizada de políticas de firewall.</li>
-        </ul>
-        <p>AWS Network Firewall es ideal para organizaciones que necesitan proteger su infraestructura de AWS con una solución de firewall gestionada.</p>
-    `,
-          imageUrl: "",
+    <p>AWS Network Firewall facilita desplegar y gestionar un firewall de red esencial para proteger su infraestructura de AWS. Proporciona una solución gestionada para inspección de tráfico, filtrado y prevención de amenazas.</p>
+    <p>Características clave de AWS Network Firewall:</p>
+    <ul>
+        <li>Inspección y filtrado de tráfico de red para detectar y bloquear amenazas.</li>
+        <li>Prevención de amenazas y protección contra ataques de red comunes.</li>
+        <li>Gestión centralizada de políticas de firewall con AWS Firewall Manager.</li>
+        <li>Integración con Amazon VPC para proteger sus subredes.</li>
+        <li>Escalabilidad automática para manejar tráfico creciente.</li>
+    </ul>
+    <p>AWS Network Firewall es ideal para organizaciones que necesitan proteger su infraestructura de AWS con una solución de firewall gestionada.</p>
+    <p><strong>Ejemplo práctico:</strong> Una empresa puede usar AWS Network Firewall para proteger sus aplicaciones web contra ataques de inyección SQL y otros tipos de tráfico malicioso, asegurando la integridad y disponibilidad de sus servicios.</p>
+  `,
+          imageUrl: "path/to/network-firewall-image.png",
         },
+
         "AWS Resource Access Manager (AWS RAM)": {
           description: `
         <p>AWS Resource Access Manager facilita compartir recursos de AWS con otras cuentas de AWS. Proporciona una forma segura y eficiente de compartir recursos sin necesidad de duplicarlos.</p>
@@ -1760,56 +1812,72 @@ function Documentation() {
         },
         "AWS Secrets Manager": {
           description: `
-        <p>AWS Secrets Manager facilita rotar, gestionar y recuperar credenciales de bases de datos, claves de API y otros secretos. Proporciona una solución segura para gestionar secretos y controlar el acceso a ellos.</p>
-        <p>Características clave de AWS Secrets Manager:</p>
-        <ul>
-            <li>Rotación automática de secretos.</li>
-            <li>Gestión segura de credenciales y claves.</li>
-            <li>Integración con servicios de AWS para gestionar el acceso a secretos.</li>
-        </ul>
-        <p>AWS Secrets Manager es ideal para organizaciones que necesitan gestionar secretos de manera segura y automatizada.</p>
-    `,
-          imageUrl: "",
+    <p>AWS Secrets Manager facilita rotar, gestionar y recuperar credenciales de bases de datos, claves de API y otros secretos. Proporciona una solución segura para gestionar secretos y controlar el acceso a ellos.</p>
+    <p>Características clave de AWS Secrets Manager:</p>
+    <ul>
+        <li>Rotación automática y segura de secretos.</li>
+        <li>Gestión segura de credenciales, claves y otros secretos.</li>
+        <li>Integración con servicios de AWS para gestionar el acceso a secretos.</li>
+        <li>Control de acceso detallado mediante políticas de IAM.</li>
+        <li>Capacidad para auditar el acceso y uso de secretos con AWS CloudTrail.</li>
+    </ul>
+    <p>AWS Secrets Manager es ideal para organizaciones que necesitan gestionar secretos de manera segura y automatizada.</p>
+    <p><strong>Ejemplo práctico:</strong> Una aplicación web puede usar AWS Secrets Manager para gestionar y rotar automáticamente las credenciales de su base de datos, reduciendo el riesgo de exposiciones y mejorando la seguridad.</p>
+  `,
+          imageUrl: secretmanager,
         },
+
         "AWS Security Hub": {
           description: `
-        <p>AWS Security Hub facilita unificar y gestionar alertas de seguridad y automatizar el cumplimiento de las mejores prácticas. Proporciona una vista centralizada de la postura de seguridad de su organización y recomendaciones para mejorarla.</p>
-        <p>Características clave de AWS Security Hub:</p>
-        <ul>
-            <li>Unificación de alertas de seguridad de múltiples servicios.</li>
-            <li>Automatización del cumplimiento de mejores prácticas de seguridad.</li>
-            <li>Informes detallados y recomendaciones de seguridad.</li>
-        </ul>
-        <p>AWS Security Hub es ideal para organizaciones que necesitan gestionar la seguridad de manera centralizada y mejorar su postura de seguridad.</p>
-    `,
-          imageUrl: "",
+    <p>AWS Security Hub facilita unificar y gestionar alertas de seguridad y automatizar el cumplimiento de las mejores prácticas. Proporciona una vista centralizada de la postura de seguridad de su organización y recomendaciones para mejorarla.</p>
+    <p>Características clave de AWS Security Hub:</p>
+    <ul>
+        <li>Unificación de alertas de seguridad de múltiples servicios de AWS.</li>
+        <li>Automatización del cumplimiento de mejores prácticas de seguridad mediante controles predefinidos.</li>
+        <li>Informes detallados y recomendaciones de seguridad basadas en estándares de la industria.</li>
+        <li>Integración con servicios como Amazon GuardDuty, AWS Config, y AWS Firewall Manager.</li>
+        <li>Evaluación continua de la postura de seguridad para detectar y mitigar vulnerabilidades.</li>
+    </ul>
+    <p>AWS Security Hub es ideal para organizaciones que necesitan gestionar la seguridad de manera centralizada y mejorar su postura de seguridad.</p>
+    <p><strong>Ejemplo práctico:</strong> Una organización puede usar AWS Security Hub para consolidar las alertas de seguridad de varios servicios de AWS, automatizar las auditorías de seguridad y recibir recomendaciones para mejorar la seguridad en toda su infraestructura.</p>
+  `,
+          imageUrl: hub,
         },
+
         "AWS Shield": {
           description: `
-        <p>AWS Shield facilita proteger contra ataques de denegación de servicio distribuido (DDoS) en sus aplicaciones. Proporciona dos niveles de protección: AWS Shield Standard y AWS Shield Advanced.</p>
-        <p>Características clave de AWS Shield:</p>
-        <ul>
-            <li>Protección contra ataques DDoS con AWS Shield Standard.</li>
-            <li>Protección avanzada y mitigación de ataques con AWS Shield Advanced.</li>
-            <li>Informes y análisis detallados de eventos de seguridad.</li>
-        </ul>
-        <p>AWS Shield es esencial para organizaciones que necesitan proteger sus aplicaciones contra ataques DDoS y garantizar la disponibilidad de sus servicios.</p>
-    `,
-          imageUrl: "",
+    <p>AWS Shield facilita proteger contra ataques de denegación de servicio distribuido (DDoS) en sus aplicaciones. Proporciona dos niveles de protección: AWS Shield Standard y AWS Shield Advanced.</p>
+    <p>Características clave de AWS Shield:</p>
+    <ul>
+        <li>Protección automática contra ataques DDoS con AWS Shield Standard.</li>
+        <li>Protección avanzada y mitigación de ataques con AWS Shield Advanced, incluyendo acceso a expertos en respuesta a DDoS.</li>
+        <li>Informes y análisis detallados de eventos de seguridad.</li>
+        <li>Integración con otros servicios de seguridad de AWS como AWS WAF y AWS Firewall Manager.</li>
+        <li>Costes de protección incluidos para la mayoría de los ataques con AWS Shield Standard.</li>
+    </ul>
+    <p>AWS Shield es esencial para organizaciones que necesitan proteger sus aplicaciones contra ataques DDoS y garantizar la disponibilidad de sus servicios.</p>
+    <p><strong>Ejemplo práctico:</strong> Una empresa de comercio electrónico puede usar AWS Shield Advanced para proteger su sitio web contra ataques DDoS, asegurando que los clientes puedan acceder a la tienda en línea incluso durante intentos de ataque.</p>
+  `,
+          imageUrl: shield,
         },
+
         "AWS WAF": {
           description: `
-        <p>AWS Web Application Firewall facilita proteger sus aplicaciones web de ataques comunes que pueden afectar su disponibilidad, comprometer su seguridad o consumir recursos excesivos. Proporciona una solución gestionada para filtrar y monitorear el tráfico HTTP/HTTPS.</p>
-        <p>Características clave de AWS WAF:</p>
-        <ul>
-            <li>Protección contra ataques de inyección SQL, cross-site scripting y más.</li>
-            <li>Gestión centralizada de reglas de firewall.</li>
-            <li>Integración con servicios de AWS como Amazon CloudFront y Application Load Balancer.</li>
-        </ul>
-        <p>AWS WAF es ideal para organizaciones que necesitan proteger sus aplicaciones web contra amenazas y ataques comunes.</p>
-    `,
-          imageUrl: "",
+    <p>AWS Web Application Firewall (WAF) facilita proteger sus aplicaciones web de ataques comunes que pueden afectar su disponibilidad, comprometer su seguridad o consumir recursos excesivos. Proporciona una solución gestionada para filtrar y monitorear el tráfico HTTP/HTTPS.</p>
+    <p>Características clave de AWS WAF:</p>
+    <ul>
+        <li>Protección contra ataques de inyección SQL, cross-site scripting (XSS) y otros tipos de exploits comunes.</li>
+        <li>Gestión centralizada de reglas de firewall para múltiples aplicaciones.</li>
+        <li>Integración con servicios de AWS como Amazon CloudFront, Application Load Balancer (ALB) y API Gateway.</li>
+        <li>Capacidad para crear reglas personalizadas y aplicar reglas gestionadas por AWS y terceros.</li>
+        <li>Monitoreo y análisis en tiempo real del tráfico web.</li>
+    </ul>
+    <p>AWS WAF es ideal para organizaciones que necesitan proteger sus aplicaciones web contra amenazas y ataques comunes.</p>
+    <p><strong>Ejemplo práctico:</strong> Un sitio web de banca en línea puede usar AWS WAF para protegerse contra intentos de inyección SQL y ataques de XSS, asegurando que las transacciones de los usuarios sean seguras y los datos permanezcan protegidos.</p>
+  `,
+          imageUrl: waf,
         },
+
         "AWS Fargate": {
           description: `
             <p><strong>AWS Fargate</strong> facilita ejecutar contenedores sin necesidad de gestionar servidores o clusters de Amazon EC2. Proporciona una solución serverless para ejecutar contenedores, permitiendo a los desarrolladores centrarse en construir aplicaciones sin preocuparse por la infraestructura subyacente.</p>
@@ -2060,7 +2128,9 @@ function Documentation() {
   };
 
   const handleSubCategoryClick = (subCategory) => {
-    setActiveSubCategory(subCategory);
+    setActiveSubCategory(
+      activeSubCategory === subCategory ? null : subCategory
+    );
   };
 
   const handleServiceClick = (service) => {
