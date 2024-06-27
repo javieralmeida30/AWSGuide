@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import cloudPractitionerLogo from '../assets/cloud-practitioner-logo.png';
 import saaLogo from '../assets/saa-logo.png';
-import Navbar from './Navbar';
 
 function Home() {
     return (
