@@ -777,7 +777,7 @@ function Exams() {
         } else if (timer > 0) {
             startTimer(timer);
         }
-    }, [isPaused]);
+    }, [intervalId, startTimer, timer]);
 
     return (
         <section id="exams">

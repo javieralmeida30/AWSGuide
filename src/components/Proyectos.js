@@ -1,6 +1,5 @@
 import React from 'react';
 import './Proyectos.css';
-import ec2Image from '../assets/ec2.png';
 import s3Image from '../assets/s3static.webp';
 import eventbridge from '../assets/eventbridge.png';
 import elasticBeanstalkImage from '../assets/docker.jpg';
