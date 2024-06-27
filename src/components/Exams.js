@@ -246,7 +246,7 @@ function Exams() {
                     "D. AWS cifra automáticamente todos los datos almacenados en S3"
                 ],
                 answer: "A",
-                explanation: "El cliente debe habilitar manualmente el cifrado para cada bucket de S3. Esto se puede hacer a nivel de bucket o a nivel de objeto."
+                explanation: "El cliente debe habilitar manualmente el cifrado en reposo para cada bucket de S3. Esto se puede hacer a nivel de bucket o a nivel de objeto."
             },
             {
                 question: "Está implementando una aplicación utilizando la Consola de administración de AWS. Sin embargo, le gustaría automatizar esta implementación para garantizar que se pueda reproducir de manera consistente en múltiples entornos. ¿Qué servicio de AWS usaría para este propósito?",
@@ -286,7 +286,7 @@ function Exams() {
                 options: [
                     "A. Amazon EC2 y AWS Auto Scaling",
                     "B. AWS Direct Connect y Amazon VPC",
-                    "C. Amazon EC2 y Amazon RDS",
+                    "C. Amazon ECS y Amazon RDS",
                     "D. AWS Lambda y AWS Step Functions"
                 ],
                 answer: "A",
@@ -615,7 +615,7 @@ function Exams() {
                 question: "Un desarrollador quiere escribir un script en Python para interactuar con los servicios de AWS. ¿Cuál es la mejor herramienta para lograr esto?",
                 options: [
                     "A. AWS CLI",
-                    "B. AWS SDK para Python (Boto3)",
+                    "B. AWS SDK Boto3",
                     "C. AWS CloudFormation",
                     "D. AWS Management Console"
                 ],
@@ -712,10 +712,18 @@ function Exams() {
     };
 
     const handleOptionChange = (questionIndex, option) => {
-        setAnswers({
-            ...answers,
+        setAnswers(prevAnswers => ({
+            ...prevAnswers,
             [questionIndex]: option
-        });
+        }));
+        
+        // Move to the next question
+        if (currentQuestionIndex < selectedExam.length - 1) {
+            setCurrentQuestionIndex(prevIndex => prevIndex + 1);
+        } else {
+            clearInterval(intervalId);
+            calculateScore();
+        }
     };
 
     const handleNextQuestion = () => {
@@ -815,7 +823,7 @@ function Exams() {
                     <p>Puntaje: {score} de {selectedExam.length}</p>
                     <Accordion allowZeroExpanded>
                         {explanations.map((item, index) => (
-                            <AccordionItem key={index}>
+                            <AccordionItem key={index} className={item.correct ? 'correct' : 'incorrect'}>
                                 <AccordionItemHeading>
                                     <AccordionItemButton>
                                         {item.question}
