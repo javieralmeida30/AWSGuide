@@ -1,6 +1,6 @@
 # AWS Guide
 
-![AWS Guide](https://javieralmeida30.github.io/AWSGuide/)
+[AWS Guide](https://javieralmeida30.github.io/AWSGuide/)
 
 ## Descripción
 
