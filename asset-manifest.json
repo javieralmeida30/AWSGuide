@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AWSGuide/static/css/main.d749e624.css",
-    "main.js": "/AWSGuide/static/js/main.a7ff0780.js",
+    "main.css": "/AWSGuide/static/css/main.e47dea32.css",
+    "main.js": "/AWSGuide/static/js/main.ee427a2b.js",
     "static/media/eventbridge.png": "/AWSGuide/static/media/eventbridge.05d6ce16f3b359ea8281.png",
     "static/media/xray.jpg": "/AWSGuide/static/media/xray.0db7ccf18abd7d21741e.jpg",
     "static/media/s3static.webp": "/AWSGuide/static/media/s3static.f623e415314ab6458b29.webp",
@@ -109,11 +109,11 @@
     "static/media/amazonvpc.png": "/AWSGuide/static/media/amazonvpc.2675569e7a9fa7e52f9f.png",
     "static/media/autoscaling.png": "/AWSGuide/static/media/autoscaling.9225aa820351f21d770f.png",
     "index.html": "/AWSGuide/index.html",
-    "main.d749e624.css.map": "/AWSGuide/static/css/main.d749e624.css.map",
-    "main.a7ff0780.js.map": "/AWSGuide/static/js/main.a7ff0780.js.map"
+    "main.e47dea32.css.map": "/AWSGuide/static/css/main.e47dea32.css.map",
+    "main.ee427a2b.js.map": "/AWSGuide/static/js/main.ee427a2b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d749e624.css",
-    "static/js/main.a7ff0780.js"
+    "static/css/main.e47dea32.css",
+    "static/js/main.ee427a2b.js"
   ]
 }
