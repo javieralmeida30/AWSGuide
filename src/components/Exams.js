@@ -792,6 +792,11 @@ function Exams() {
             )}
             {selectedExam.length > 0 && score === null && (
                 <div id="examContent">
+                    <div className="question-header">
+                        <div className="question-counter">
+                            {currentQuestionIndex + 1}/{selectedExam.length}
+                        </div>
+                    </div>
                     <div className="question">
                         <p>{selectedExam[currentQuestionIndex].question}</p>
                         <ul>
@@ -813,6 +818,9 @@ function Exams() {
                     </div>
                     <div className="navigation-buttons">
                         <button onClick={handlePreviousQuestion} disabled={currentQuestionIndex === 0}>Volver</button>
+                        <div id="timer">
+                            {`${parseInt(timer / 60, 10)}:${('0' + timer % 60).slice(-2)}`}
+                        </div>
                         <button onClick={handleNextQuestion}>{currentQuestionIndex < selectedExam.length - 1 ? 'Siguiente' : 'Finalizar'}</button>
                     </div>
                 </div>
@@ -845,9 +853,6 @@ function Exams() {
                     <button onClick={handleEndExam}>Terminar Examen</button>
                 </div>
             )}
-            <div id="timer">
-                {`${parseInt(timer / 60, 10)}:${('0' + timer % 60).slice(-2)}`}
-            </div>
         </section>
     );
 }
